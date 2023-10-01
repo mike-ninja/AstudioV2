@@ -36,7 +36,7 @@ export default function Carousel() {
                     height={700}
                     width={700}
                     quality={95}
-                    className="object-cover h-full rounded-lg"
+                    className="object-cover h-full rounded-md"
                   />
                 </div>
               ))}

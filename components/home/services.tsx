@@ -13,14 +13,16 @@ export default function Services() {
     <section id="services">
       <div className="container">
         <div className="text-center">
-          <h1>
-            <Link className="text-pink-500" href="/pricelist">
+          <h2 className="text-pink-500 mb-2 text-3xl">
+            <Link href="/pricelist">
               {englishText.services.heading}
             </Link>
-          </h1>
+          </h2>
           <h3>
             {englishText.services.cta.text}{" "}
-            <Link className="text-pink-500" href="/pricelist">here</Link>
+            <Link className="text-pink-500 text-base" href="/pricelist">
+              here
+            </Link>
             {" "}
           </h3>
           <div className="">
@@ -34,13 +36,13 @@ export default function Services() {
             })}
             <div className=""></div>
           </div>
-          <h3>
+          <h4 className="text-base">
             {englishText.services.consultation.text[0]}{" "}
-            <a href={linktrLink} target="_blank" rel="noreferrer">
+            <Link href={linktrLink} target="_blank" rel="noreferrer" className="text-pink-500">
               {englishText.services.consultation.tag}
-            </a>{" "}
+            </Link>{" "}
             {englishText.services.consultation.text[1]}
-          </h3>
+          </h4>
         </div>
       </div>
     </section>
@@ -66,27 +68,26 @@ function Service({ title, description, extra }: ServiceProps) {
   };
 
   return (
-    <div onClick={toggleView} className="">
+    <div onClick={toggleView} className="py-4">
       <div className="flex justify-between items-center">
-        <h2>{title}</h2>
+        <h2 className="text-2xl font-bold uppercase text-sky-800">{title}</h2>
         <div className="">
           <AiOutlinePlus
             style={hideWhenVisible}
             onClick={toggleView}
+            className="cursor-pointer text-2xl text-slate-600"
           />
           <AiOutlineClose
-            className=""
             style={showWhenVisible}
             onClick={toggleView}
+            className="cursor-pointer"
           />
         </div>
       </div>
-      <div className="" style={showWhenVisible}>
-        <ul>
-          {description.map((d) => <li className="" key={d}>{d}</li>)}
-          {extra.map((d) => <li key={d}>{d}</li>)}
-        </ul>
-      </div>
+      <ul className="text-left pl-6 flex flex-col gap-1" style={showWhenVisible}>
+        {description.map((d) => <li key={d} className="list-disc">{d}</li>)}
+        {extra.map((d) => <li key={d} className="pl-2">{d}</li>)}
+      </ul>
     </div>
   );
 }

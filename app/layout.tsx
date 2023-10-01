@@ -9,7 +9,7 @@ import { Header } from "@/components";
 
 const lato = Lato({
   subsets: ["latin"],
-  weight: ["300"],
+  weight: ["100", "300", "400", "700", "900"],
 });
 // const playFair = Playfair({ weight: "700", subsets: ["latin"] });
 

@@ -9,19 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "next": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/react": "latest",
     "@types/node": "latest",
+    "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
+    "embla-carousel-react": "^8.0.0-rc14",
+    "embla-carousel-wheel-gestures": "^8.0.0-rc05",
     "eslint": "latest",
-    "eslint-config-next": "latest"
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "react-icons": "^4.11.0",
+    "tailwindcss": "latest",
+    "typescript": "latest"
   }
 }

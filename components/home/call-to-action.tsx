@@ -1,29 +1,35 @@
-import React from 'react'
+import React from "react";
 
-import { englishText, linktrLink } from '@/lib'
+import { englishText, linktrLink } from "@/lib";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function CallToAction() {
   return (
-    <section id="calltoaction">
-      <div className="calltoaction__container">
-    <div className="book__now">
-      <div className="book__now-container">
-        <h2>{englishText.callToAction.heading}</h2>
-        <p>
-          {englishText.callToAction.cta[0]}{" "}
-          <a href={linktrLink} target="_blank" rel="noreferrer">
-            {englishText.callToAction.cta[1]}
-          </a>
-        </p>
+    <section id="calltoaction" className="relative h-[30rem]">
+      <Image
+        src="/images/hair-saloon-larnaca.webp"
+        alt="Hair Salon Larnaca"
+        fill
+        className="object-cover z-0"
+      />
+      <div className="container flex flex-col justify-center items-center h-full">
+        <div className="z-10 bg-white/70 w-full text-center py-16 rounded-md">
+          <h2 className="text-6xl italic text-teal-400 font-semibold">{englishText.callToAction.heading}</h2>
+          <p className="text-2xl text-sky-800/70 font-normal">
+            {englishText.callToAction.cta[0]}{" "}
+            <Link href={linktrLink} target="_blank" rel="noreferrer" className="text-pink-500">
+              {englishText.callToAction.cta[1]}
+            </Link>
+          </p>
+        </div>
       </div>
-      <div className="book__now-contact">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
         <span>
           {englishText.callToAction.cta[2]}{"  "}
-          <a href="#contact">{englishText.callToAction.cta[3]}</a>
+          <Link href="#contact">{englishText.callToAction.cta[3]}</Link>
         </span>
       </div>
-    </div>
-      </div>
     </section>
-  )
+  );
 }

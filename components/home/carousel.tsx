@@ -18,7 +18,7 @@ export default function Carousel() {
 
   return (
     <section className="px-10 py-10">
-      <div className="h-full flex items-center">
+      <div className="container flex items-center">
         <div className="relative">
           <div
             ref={emblaRef}

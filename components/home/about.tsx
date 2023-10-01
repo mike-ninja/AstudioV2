@@ -1,9 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { useSectionInView } from "@/lib";
 
 export default function About() {
+  const { ref } = useSectionInView("About");
   return (
-    <section id="about">
+    <section ref={ref} id="about">
       <div className="container py-28">
         <p>
           Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit

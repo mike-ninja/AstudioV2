@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 
 import Link from "next/link";
+import { useSectionInView } from "@/lib";
 
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
@@ -10,8 +11,10 @@ import { AiOutlineClose } from "react-icons/ai";
 import { englishText, linktrLink } from "@/lib";
 
 export default function Services() {
+  const { ref } = useSectionInView("Services");
+
   return (
-    <section id="services">
+    <section ref={ref} id="services">
       <div className="container py-24">
         <div className="text-center">
           <h2 className="text-pink-500 mb-2 text-3xl">
@@ -69,7 +72,7 @@ function Service({ title, description, extra }: ServiceProps) {
   };
 
   return (
-    <div onClick={toggleView} className="py-4">
+    <div onClick={toggleView} className="py-6">
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-bold uppercase text-sky-800">{title}</h2>
         <div className="">

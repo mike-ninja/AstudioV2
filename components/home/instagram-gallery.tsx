@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import { InstagramPost } from "@/lib/types";
+import { useSectionInView } from "@/lib";
 
 import { englishText, instagramApiLink, instagramLink } from "@/lib";
 import Link from "next/link";
@@ -12,6 +13,7 @@ export default function InstagramGallery() {
   const [data, setData] = useState<InstagramPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { ref } = useSectionInView("Instagram");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,7 +34,7 @@ export default function InstagramGallery() {
 
         // console.log(allPosts);
 
-        setData(allPosts.slice(0, 8));
+        setData(allPosts.slice(0, 12));
         setLoading(false);
       } catch (error: unknown) {
         if (error instanceof Error) {
@@ -48,7 +50,7 @@ export default function InstagramGallery() {
 
   if (loading) {
     return (
-      <section id="instagram">
+      <section ref={ref} id="instagram">
         <div className="container">
           <InstaBanner />
           <div>
@@ -61,7 +63,7 @@ export default function InstagramGallery() {
 
   if (error) {
     return (
-      <section id="instagram">
+      <section ref={ref} id="instagram">
         <div className="container">
           <InstaBanner />
           <div>
@@ -73,10 +75,10 @@ export default function InstagramGallery() {
   }
 
   return (
-    <section id="instagram" className="py-40">
+    <section ref={ref} id="instagram" className="py-40">
       <div className="container">
         <InstaBanner />
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 h-[40rem]">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 h-[60rem]">
           {data.map((post) => (
             <Link
               key={post.id}
@@ -112,9 +114,11 @@ function InstaBanner() {
           rel="noreferrer"
           className="text-pink-500"
         >
-        {englishText.contact.instagram[1]}{" "}
+          {englishText.contact.instagram[1]}
+          {" "}
         </Link>{" "}
-        {englishText.contact.instagram[2]}{" "}
+        {englishText.contact.instagram[2]}
+        {" "}
       </h2>
       <div className="border-solid border-t-2 border-stone-400/90 w-32"></div>
     </div>

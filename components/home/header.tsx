@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useSectionInView } from "@/lib";
 
 import { linktrLink } from "@/lib";
 
@@ -9,8 +12,10 @@ import { Playfair } from "next/font/google";
 const playFair = Playfair({ weight: "800", subsets: ["latin"] });
 
 export default function Header() {
+  const { ref } = useSectionInView("Home");
+
   return (
-    <header id="home" className="relative h-screen text-white">
+    <header ref={ref} id="home" className="relative h-screen text-white">
       <Image
         src="/images/astudio-header.webp"
         alt="Astudio Larnaca Header"

@@ -11,33 +11,34 @@ import { carouselImages } from "@/lib";
 export default function Carousel() {
   const [emblaRef, embla] = useEmblaCarousel({
     slidesToScroll: "auto",
-    containScroll: "trimSnaps",
+    // containScroll: "trimSnaps",
   }, [
     WheelGesturesPlugin(),
   ]);
 
   return (
     <section className="px-10 py-10">
-      <div className="container flex items-center">
+      <div className="container">
         <div className="relative">
           <div
             ref={emblaRef}
             className="overflow-hidden cursor-grab"
           >
-            <div className="flex touch-pan-y -ml-[1rem]">
+            <div className="flex touch-pan-y -ml-4">
               {carouselImages.map((image, index) => (
                 <div
                   key={index}
-                  className="flex-grow-0 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 pl-[1rem] relative"
+                  className="flex-grow-0 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 pl-4 h-[25rem]"
                 >
-                  <Image
-                    src={image.image}
-                    alt={image.alt}
-                    height={700}
-                    width={700}
-                    quality={95}
-                    className="object-cover h-full rounded-md"
-                  />
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={image.image}
+                      alt={image.alt}
+                      fill
+                      quality={95}
+                      className="object-cover rounded-md"
+                    />
+                  </div>
                 </div>
               ))}
             </div>

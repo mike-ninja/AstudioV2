@@ -3,7 +3,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <section className="h-screen">
+    <section className="h-[50rem]">
       <div className="grid grid-cols-2 h-full">
         <div className="relative">
           <Image

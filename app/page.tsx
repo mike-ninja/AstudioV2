@@ -1,4 +1,4 @@
-import { About, CallToAction, Carousel, InstagramGallery, Quote, Services } from "@/components";
+import { About, CallToAction, Carousel, Contact, InstagramGallery, Quote, Services } from "@/components";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <Services />
       <CallToAction />
       <InstagramGallery />
+      <Contact />
     </main>
   );
 }

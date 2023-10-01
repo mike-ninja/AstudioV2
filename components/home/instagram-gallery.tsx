@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { InstagramPost } from "@/lib/types";
 
-import { englishText, instagramApiLink } from "@/lib";
+import { englishText, instagramApiLink, instagramLink } from "@/lib";
 import Link from "next/link";
 
 export default function InstagramGallery() {
@@ -23,10 +23,11 @@ export default function InstagramGallery() {
           res.data
         );
 
-
         const allPosts = data.map((post: InstagramPost) => post).filter((
           post,
-        ) => post.media_type === "IMAGE" || post.media_type === "CAROUSEL_ALBUM");
+        ) =>
+          post.media_type === "IMAGE" || post.media_type === "CAROUSEL_ALBUM"
+        );
 
         console.log(allPosts);
 
@@ -70,20 +71,24 @@ export default function InstagramGallery() {
     );
   }
 
-
   return (
-    <section id="instagram">
+    <section id="instagram" className="py-10">
       <div className="container">
         <InstaBanner />
-        <div className="grid grid-cols-2 sm:grid-cols-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 h-[40rem]">
           {data.map((post) => (
-            <Link key={post.id} href={post.permalink} target="_blank" rel="noreferer">
+            <Link
+              key={post.id}
+              href={post.permalink}
+              target="_blank"
+              rel="noreferer"
+              className="relative"
+            >
               <Image
                 src={post.media_url}
                 alt="Instagram Post Astudio Larnaca"
-                width={200}
-                height={200}
-                className="object-cover w-auto h-auto"
+                fill
+                className="object-cover rounded-md transition-all hover:scale-95"
               >
               </Image>
             </Link>
@@ -96,10 +101,21 @@ export default function InstagramGallery() {
 
 function InstaBanner() {
   return (
-    <div className="">
-      <div className=""></div>
-      <span>{englishText.instagram}</span>
-      <div className=""></div>
+    <div className="flex flex-col items-center mb-8">
+      <div className="border-solid border-b-2 border-stone-400/90 w-32"></div>
+      <h2 className="text-3xl my-3">
+        {englishText.contact.instagram[0]}{" "}
+        <Link
+          href={instagramLink}
+          target="_blank"
+          rel="noreferrer"
+          className="text-pink-500"
+        >
+        {englishText.contact.instagram[1]}{" "}
+        </Link>{" "}
+        {englishText.contact.instagram[2]}{" "}
+      </h2>
+      <div className="border-solid border-t-2 border-stone-400/90 w-32"></div>
     </div>
   );
 }

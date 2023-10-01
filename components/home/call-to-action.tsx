@@ -24,10 +24,10 @@ export default function CallToAction() {
           </p>
         </div>
       </div>
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
-        <span>
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+        <span className="text-white text-lg font-normal">
           {englishText.callToAction.cta[2]}{"  "}
-          <Link href="#contact">{englishText.callToAction.cta[3]}</Link>
+          <Link href="#contact" className="text-pink-500">{englishText.callToAction.cta[3]}</Link>
         </span>
       </div>
     </section>

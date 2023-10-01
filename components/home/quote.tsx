@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Quote() {
   return (
-    <section className="h-[50vh] flex items-center">
+    <section id="about" className="h-[35rem] flex items-center">
       <div className="container">
         <p>
           Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit

@@ -6,14 +6,14 @@ import Link from "next/link";
 
 export default function CallToAction() {
   return (
-    <section id="calltoaction" className="relative h-[30rem]">
+    <section id="calltoaction" className="relative h-[35rem] flex items-center">
       <Image
         src="/images/hair-saloon-larnaca.webp"
         alt="Hair Salon Larnaca"
         fill
         className="object-cover z-0"
       />
-      <div className="container flex flex-col justify-center items-center h-full">
+      <div className="container flex">
         <div className="z-10 bg-white/70 w-full text-center py-16 rounded-md">
           <h2 className="text-6xl italic text-teal-400 font-semibold">{englishText.callToAction.heading}</h2>
           <p className="text-2xl text-sky-800/70 font-normal">

@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
@@ -29,7 +30,7 @@ export default function InstagramGallery() {
           post.media_type === "IMAGE" || post.media_type === "CAROUSEL_ALBUM"
         );
 
-        console.log(allPosts);
+        // console.log(allPosts);
 
         setData(allPosts.slice(0, 8));
         setLoading(false);
@@ -72,7 +73,7 @@ export default function InstagramGallery() {
   }
 
   return (
-    <section id="instagram" className="py-10">
+    <section id="instagram" className="py-40">
       <div className="container">
         <InstaBanner />
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 h-[40rem]">
@@ -101,7 +102,7 @@ export default function InstagramGallery() {
 
 function InstaBanner() {
   return (
-    <div className="flex flex-col items-center mb-8">
+    <div className="flex flex-col items-center mb-20">
       <div className="border-solid border-b-2 border-stone-400/90 w-32"></div>
       <h2 className="text-3xl my-3">
         {englishText.contact.instagram[0]}{" "}

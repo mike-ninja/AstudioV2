@@ -3,15 +3,14 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 import { Lato } from "next/font/google";
-// import { Playfair } from "next/font/google";
 
 import { Header } from "@/components";
+import { ActiveSectionContextProvider } from "@/context";
 
 const lato = Lato({
   subsets: ["latin"],
   weight: ["100", "300", "400", "700", "900"],
 });
-// const playFair = Playfair({ weight: "700", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "A Studio Larnaca",
@@ -24,10 +23,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body className={`${lato.className}`}>
-        <Header />
-        {children}
+        <ActiveSectionContextProvider>
+          <Header />
+          {children}
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );

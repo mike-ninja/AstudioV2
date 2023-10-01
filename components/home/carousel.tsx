@@ -17,7 +17,7 @@ export default function Carousel() {
   ]);
 
   return (
-    <section className="px-10 py-10">
+    <section className="h-[30rem] flex items-center">
       <div className="container">
         <div className="relative">
           <div

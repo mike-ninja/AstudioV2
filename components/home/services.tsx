@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 
 import Link from "next/link";
@@ -11,7 +12,7 @@ import { englishText, linktrLink } from "@/lib";
 export default function Services() {
   return (
     <section id="services">
-      <div className="container">
+      <div className="container py-24">
         <div className="text-center">
           <h2 className="text-pink-500 mb-2 text-3xl">
             <Link href="/pricelist">

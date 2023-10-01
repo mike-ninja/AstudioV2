@@ -1,9 +1,18 @@
-import { About, CallToAction, Carousel, Contact, InstagramGallery, Quote, Services } from "@/components";
+import {
+  About,
+  CallToAction,
+  Carousel,
+  Contact,
+  InstagramGallery,
+  Navbar,
+  // Quote,
+  Services,
+} from "@/components";
 
 export default function Home() {
   return (
-    <main>
-      <Quote />
+    <main className="relative">
+      <Navbar />
       <About />
       <Carousel />
       <Services />

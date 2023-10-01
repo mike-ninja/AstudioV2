@@ -10,10 +10,11 @@ const playFair = Playfair({ weight: "800", subsets: ["latin"] });
 
 export default function Header() {
   return (
-    <header id="header" className="relative h-screen text-white">
+    <header id="home" className="relative h-screen text-white">
       <Image
         src="/images/astudio-header.webp"
         alt="Astudio Larnaca Header"
+        quality={100}
         fill
         className="object-cover z-0"
       />

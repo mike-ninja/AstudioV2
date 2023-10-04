@@ -1,14 +1,11 @@
-"use client";
-
 import React from "react";
 
-import { addressLink, englishText, instagramLink, useSectionInView } from "@/lib";
+import { addressLink, englishText, instagramLink } from "@/lib";
 import Link from "next/link";
 
 export default function Contact() {
-  const {ref} =useSectionInView("Contact");
   return (
-    <section ref={ref} id="contact">
+    <section id="contact">
       <div className="container">
         <div className="px-10 py-16 bg-teal-500 flex flex-col rounded-t-md text-white">
           <h2 className="text-6xl font-normal">Contact Us</h2>

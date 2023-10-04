@@ -1,18 +1,12 @@
-"use client";
-
 import React from "react";
 
 import { englishText, linktrLink } from "@/lib";
 import Image from "next/image";
 import Link from "next/link";
-import { useSectionInView } from "@/lib";
 
 export default function CallToAction() {
-  const { ref } = useSectionInView("CallToAction", 0.5);
-
   return (
     <section
-      ref={ref}
       id="calltoaction"
       className="relative h-[35rem] flex items-center"
     >

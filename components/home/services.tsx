@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 
 import Link from "next/link";
-import { useSectionInView } from "@/lib";
 
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
@@ -11,10 +10,8 @@ import { AiOutlineClose } from "react-icons/ai";
 import { englishText, linktrLink } from "@/lib";
 
 export default function Services() {
-  const { ref } = useSectionInView("Services");
-
   return (
-    <section ref={ref} id="services">
+    <section id="services">
       <div className="container py-24">
         <div className="text-center">
           <h2 className="text-pink-500 mb-2 text-3xl">

@@ -4,15 +4,14 @@ import {
   Carousel,
   Contact,
   InstagramGallery,
-  Navbar,
-  // Quote,
+  Quote,
   Services,
 } from "@/components";
 
 export default function Home() {
   return (
-    <main className="relative">
-      <Navbar />
+    <main>
+      <Quote />
       <About />
       <Carousel />
       <Services />

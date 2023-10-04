@@ -7,7 +7,6 @@ import {
 import { englishText } from "./static";
 import { carouselImages } from "./carousel-images";
 import { navLinks } from "./nav-links";
-import { useSectionInView } from "./hooks";
 import { navScreenPosition } from "./nav-screen-position";
 
 export {
@@ -19,5 +18,4 @@ export {
   linktrLink,
   navLinks,
   navScreenPosition,
-  useSectionInView,
 };

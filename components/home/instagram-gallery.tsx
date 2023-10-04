@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import { InstagramPost } from "@/lib/types";
-import { useSectionInView } from "@/lib";
 
 import { englishText, instagramApiLink, instagramLink } from "@/lib";
 import Link from "next/link";
@@ -13,7 +12,6 @@ export default function InstagramGallery() {
   const [data, setData] = useState<InstagramPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const { ref } = useSectionInView("Instagram");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -50,7 +48,7 @@ export default function InstagramGallery() {
 
   if (loading) {
     return (
-      <section ref={ref} id="instagram">
+      <section id="instagram">
         <div className="container">
           <InstaBanner />
           <div>
@@ -63,7 +61,7 @@ export default function InstagramGallery() {
 
   if (error) {
     return (
-      <section ref={ref} id="instagram">
+      <section id="instagram">
         <div className="container">
           <InstaBanner />
           <div>
@@ -75,7 +73,7 @@ export default function InstagramGallery() {
   }
 
   return (
-    <section ref={ref} id="instagram" className="py-40">
+    <section id="instagram" className="py-40">
       <div className="container">
         <InstaBanner />
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 h-[60rem]">

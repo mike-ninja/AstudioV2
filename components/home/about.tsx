@@ -4,17 +4,18 @@ import React from "react";
 export default function About() {
   return (
     <section id="about">
-      <div className="grid grid-cols-2 h-[50rem]">
-        <div className="relative">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 h-auto sm:h-[50rem]">
+        <div className="relative hidden sm:block">
           <Image
             src="/images/larnaca-hair-studio.webp"
             alt="Hair Salon Larnaca"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover object-top"
           />
         </div>
         <div className="flex justify-center items-center">
-          <p className="mx-10">
+          <p className="sm:mx-10">
             Lorem ipsum dolor sit amet, officia excepteur ex fugiat
             reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit
             ex esse exercitation amet. Nisi anim cupidatat excepteur officia.

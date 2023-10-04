@@ -3,6 +3,7 @@ import {
   CallToAction,
   Carousel,
   Contact,
+  Header,
   InstagramGallery,
   Quote,
   Services,
@@ -11,8 +12,9 @@ import {
 export default function Home() {
   return (
     <main>
-      <Quote />
+      <Header headerBackground="/images/astudio-header.webp" />
       <About />
+      <Quote />
       <Carousel />
       <Services />
       <CallToAction />

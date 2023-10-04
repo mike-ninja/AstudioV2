@@ -4,8 +4,9 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import { InstagramPost } from "@/lib/types";
+import getPosts from "@/instagram/instagram-fetch";
 
-import { englishText, instagramApiLink, instagramLink } from "@/lib";
+import { englishText, instagramLink } from "@/lib";
 import Link from "next/link";
 
 export default function InstagramGallery() {
@@ -16,23 +17,15 @@ export default function InstagramGallery() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `${instagramApiLink}IGQWRNelJPYk40RXljVnA0Y3lpR1VtZA0FvaUZANZAzR5OUdZAcXc0SDN1cWRpUEcwdmlfRGdlM19YSG45WjZAIYjJnZAkdrQ1Y1bmFsU3JqMmdQdjJObEFFSzdSZAnUyclFSQzc4NV9mMFFjODBpOXdNUUc2Rk16T2RHUzgZD`,
-        );
+        const data = await getPosts();
 
-        const data: InstagramPost[] = await response.json().then((res) =>
-          res.data
-        );
-
-        const allPosts = data.map((post: InstagramPost) => post).filter((
+        const posts = data.map((post: InstagramPost) => post).filter((
           post,
         ) =>
           post.media_type === "IMAGE" || post.media_type === "CAROUSEL_ALBUM"
         );
 
-        // console.log(allPosts);
-
-        setData(allPosts.slice(0, 12));
+        setData(posts.slice(0, 12));
         setLoading(false);
       } catch (error: unknown) {
         if (error instanceof Error) {
@@ -51,7 +44,7 @@ export default function InstagramGallery() {
       <section id="instagram">
         <div className="container">
           <InstaBanner />
-          <div>
+          <div className="flex justify-center items-center">
             <span>Loading...</span>
           </div>
         </div>
@@ -64,7 +57,7 @@ export default function InstagramGallery() {
       <section id="instagram">
         <div className="container">
           <InstaBanner />
-          <div>
+          <div className="flex justify-center items-center">
             <span>Error: {error}</span>
           </div>
         </div>
@@ -73,7 +66,7 @@ export default function InstagramGallery() {
   }
 
   return (
-    <section id="instagram" className="py-40">
+    <section id="instagram">
       <div className="container">
         <InstaBanner />
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 h-[60rem]">
@@ -89,6 +82,7 @@ export default function InstagramGallery() {
                 src={post.media_url}
                 alt="Instagram Post Astudio Larnaca"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover rounded-md transition-all hover:scale-95"
               >
               </Image>
@@ -102,7 +96,7 @@ export default function InstagramGallery() {
 
 function InstaBanner() {
   return (
-    <div className="flex flex-col items-center mb-20">
+    <div className="flex flex-col items-center">
       <div className="border-solid border-b-2 border-stone-400/90 w-32"></div>
       <h2 className="text-3xl my-3">
         {englishText.contact.instagram[0]}{" "}

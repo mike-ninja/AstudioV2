@@ -4,22 +4,22 @@ import Image from "next/image";
 
 import { linktrLink } from "@/lib";
 
-import { Playfair } from "next/font/google";
+type HeaderProps = {
+  headerBackground: string;
+};
 
-const playFair = Playfair({ weight: "800", subsets: ["latin"] });
-
-export default function Header() {
+export default function Header({ headerBackground }: HeaderProps) {
   return (
     <header id="home" className="relative h-screen text-white">
       <Image
-        src="/images/astudio-header.webp"
+        src={headerBackground}
         alt="Astudio Larnaca Header"
         quality={100}
         fill
         className="object-cover z-0"
       />
 
-      <small className="absolute top-4 left-1/2 -translate-x-1/2 text-[1.1rem] tracking-widest">
+      <small className="absolute top-4 left-1/2 -translate-x-1/2 text-sm sm:text-lg tracking-widest">
         TREAT YOUR HAIR
       </small>
 
@@ -33,10 +33,15 @@ export default function Header() {
 function HeaderBox() {
   return (
     <div className="z-10 text-center">
-      <h1 className={`${playFair.className} tracking-tight text-8xl`}>
+      <h1
+        style={{ fontFamily: "Playfair Display SC" }}
+        className="tracking-tight text-7xl sm:text-8xl"
+      >
         A&nbsp;Studio
       </h1>
-      <h2 className="text-2xl mb-4">Hair&nbsp;Studio | Larnaca,&nbsp;Cyprus</h2>
+      <h2 className="text-lg sm:text-2xl mb-4">
+        Hair&nbsp;Studio | Larnaca,&nbsp;Cyprus
+      </h2>
       <div className="flex justify-center">
         <Link
           href={linktrLink}

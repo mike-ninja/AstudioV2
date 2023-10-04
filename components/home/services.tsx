@@ -6,7 +6,6 @@ import { a, useSpring } from "@react-spring/web";
 import Link from "next/link";
 
 import { AiOutlinePlus } from "react-icons/ai";
-import { AiOutlineClose } from "react-icons/ai";
 
 import { englishText, linktrLink } from "@/lib";
 import useMeasure from "react-use-measure";
@@ -14,16 +13,16 @@ import useMeasure from "react-use-measure";
 export default function Services() {
   return (
     <section id="services">
-      <div className="container py-24">
+      <div className="container">
         <div className="text-center">
-          <h2 className="text-pink-500 mb-2 text-3xl">
+          <h2 className="text-pink-500 mb-2 text-2xl sm:text-3xl">
             <Link href="/pricelist">
               {englishText.services.heading}
             </Link>
           </h2>
-          <h3>
+          <h3 className="text-sm sm:text-base">
             {englishText.services.cta.text}{" "}
-            <Link className="text-pink-500 text-base" href="/pricelist">
+            <Link className="text-pink-500" href="/pricelist">
               here
             </Link>
             {" "}
@@ -33,13 +32,13 @@ export default function Services() {
               return (
                 <div key={index}>
                   <Service {...service} />
-                  <div className="h-[1px] w-full bg-slate-400 mx-auto"></div>
+                  <div className="h-[1px] w-full bg-slate-400/40"></div>
                 </div>
               );
             })}
             <div className=""></div>
           </div>
-          <h4 className="text-base">
+          <h4 className="text-sm sm:text-base">
             {englishText.services.consultation.text[0]}{" "}
             <Link
               href={linktrLink}
@@ -57,92 +56,37 @@ export default function Services() {
   );
 }
 
-type ServiceProps = (typeof englishText.services.products)[number];
-
-// function Service({ title, description, extra }: ServiceProps) {
-//   const [view, setView] = useState(false);
-//
-//   const hideWhenVisible = {
-//     display: view ? "none" : "",
-//     opacity: view ? 0 : 1,
-//   };
-//   const showWhenVisible = {
-//     display: view ? "" : "none",
-//     opacity: view ? 1 : 0,
-//   };
-//
-//   const toggleView = () => {
-//     setView(!view);
-//   };
-//
-//   return (
-//     <div onClick={toggleView} className="py-6">
-//       <div className="flex justify-between items-center">
-//         <h2 className="text-2xl font-bold uppercase text-sky-800">{title}</h2>
-//         <div className="">
-//           <AiOutlinePlus
-//             style={hideWhenVisible}
-//             onClick={toggleView}
-//             className="cursor-pointer text-2xl text-slate-600"
-//           />
-//           <AiOutlineClose
-//             style={showWhenVisible}
-//             onClick={toggleView}
-//             className="cursor-pointer"
-//           />
-//         </div>
-//       </div>
-//       <ul className="text-left pl-6 flex flex-col gap-1" style={showWhenVisible}>
-//         {description.map((d) => <li key={d} className="list-disc">{d}</li>)}
-//         {extra.map((d) => <li key={d} className="pl-2">{d}</li>)}
-//       </ul>
-//     </div>
-//   );
-// }
-
 function usePrevious<T>(value: T) {
   const ref = useRef<T>();
   useEffect(() => void (ref.current = value), [value]);
   return ref.current;
 }
 
+type ServiceProps = (typeof englishText.services.products)[number];
 function Service({ title, description, extra }: ServiceProps) {
   const [isOpen, setOpen] = useState(false);
   const previous = usePrevious(isOpen);
   const [ref, { height: viewHeight }] = useMeasure();
-  const { height, opacity, transform, y } = useSpring({
-    from: { height: 0, opacity: 0, transform: "rotate(0deg)", y: 0 },
+  const { height, transform, y } = useSpring({
+    from: { height: 0, transform: "rotate(0deg)", y: 0 },
     to: {
       height: isOpen ? viewHeight : 0,
-      opacity: isOpen ? 1 : 0,
       transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
       y: isOpen ? 0 : -10,
     },
   });
 
-  console.log(transform);
-
-  // const hideWhenVisible = {
-  //   display: view ? "none" : "",
-  //   opacity: view ? 0 : 1,
-  // };
-  // const showWhenVisible = {
-  //   display: view ? "" : "none",
-  //   opacity: view ? 1 : 0,
-  // };
-  //
-  const toggleView = () => {
-    setOpen(!isOpen);
-  };
-
   return (
-    <div onClick={toggleView} className="py-6">
+    <div
+      onClick={() => setOpen(!isOpen)}
+      className="pt-3 pb-2 sm:pt-6 sm:pb-5"
+    >
       <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold uppercase text-sky-800">{title}</h2>
-        <a.div style={{ transform: transform }}>
+        <h2 className="text-xl sm:text-2xl font-bold uppercase text-sky-800">{title}</h2>
+        <a.div style={{ transform: transform }} className="rounded-full transition-all ease-in p-1 hover:bg-slate-300">
           <AiOutlinePlus
-            onClick={toggleView}
-            className="cursor-pointer text-2xl text-slate-600"
+            onClick={() => setOpen(!isOpen)}
+            className="cursor-pointer text-xl sm:text-2xl text-slate-600"
           />
         </a.div>
       </div>
@@ -150,14 +94,13 @@ function Service({ title, description, extra }: ServiceProps) {
       <a.div
         style={{
           height: isOpen && previous === isOpen ? "auto" : height,
-          // opacity: opacity,
           overflow: "hidden",
           y: y,
         }}
       >
         <a.ul
           ref={ref}
-          className="text-left pl-6 flex flex-col gap-1 pt-2"
+          className="text-left pl-6 flex flex-col gap-1 pt-2 text-xs sm:text-base"
         >
           {description.map((d) => <li key={d} className="list-disc">{d}</li>)}
           {extra.map((d) => <li key={d} className="pl-2">{d}</li>)}

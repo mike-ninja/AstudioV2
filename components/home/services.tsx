@@ -13,7 +13,7 @@ import useMeasure from "react-use-measure";
 export default function Services() {
   return (
     <section id="services">
-      <div className="container py-14">
+      <div className="container py-8 sm:pb-14">
         <div className="text-center">
           <h2 className="text-pink-500 mb-2 text-2xl sm:text-3xl">
             <Link href="/pricelist">
@@ -82,7 +82,7 @@ function Service({ title, description, extra }: ServiceProps) {
       className="pt-3 pb-2 sm:pt-6 sm:pb-5 cursor-pointer"
     >
       <div className="flex justify-between items-center">
-        <h2 className="text-xl sm:text-2xl font-bold uppercase text-sky-800">{title}</h2>
+        <h2 className="text-lg sm:text-2xl font-bold uppercase text-sky-800">{title}</h2>
         <a.div style={{ transform: transform }} className="rounded-full transition-all ease-in p-1 hover:bg-slate-300">
           <AiOutlinePlus
             onClick={() => setOpen(!isOpen)}

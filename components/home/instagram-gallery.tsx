@@ -42,7 +42,7 @@ export default function InstagramGallery() {
   if (loading) {
     return (
       <section id="instagram">
-        <div className="container py-14">
+        <div className="container py-8 sm:py-14">
           <InstaBanner />
           <div className="flex justify-center items-center">
             <span>Loading...</span>
@@ -55,7 +55,7 @@ export default function InstagramGallery() {
   if (error) {
     return (
       <section id="instagram">
-        <div className="container py-14">
+        <div className="container py-8 sm:py-14">
           <InstaBanner />
           <div className="flex justify-center items-center">
             <span>
@@ -70,7 +70,7 @@ export default function InstagramGallery() {
 
   return (
     <section id="instagram">
-      <div className="container py-14">
+      <div className="container py-8 sm:py-14">
         <InstaBanner />
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 h-[60rem]">
           {data.map((post) => (

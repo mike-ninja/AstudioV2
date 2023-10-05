@@ -8,7 +8,7 @@ export default function CallToAction() {
   return (
     <section
       id="calltoaction"
-      className="relative h-[25rem] sm:h-[35rem] lg:h-[45rem] flex items-center"
+      className="relative h-[20rem] sm:h-[35rem] lg:h-[45rem] flex items-center"
     >
       <Image
         src="/images/hair-saloon-larnaca.webp"

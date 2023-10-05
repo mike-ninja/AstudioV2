@@ -23,7 +23,7 @@ export default function Carousel() {
 
   return (
     <section className="flex items-center">
-      <div className="container py-14">
+      <div className="container py-0 sm:py-14">
         <div className="relative">
           <div
             ref={emblaRef}
@@ -50,7 +50,7 @@ export default function Carousel() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center mt-2">
+        <div className="flex justify-center items-center mt-4">
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}

@@ -1,4 +1,4 @@
-import { navLinks } from ".";
+// import { navLinks } from ".";
 
 export type InstagramPost = {
   id: string;
@@ -7,4 +7,4 @@ export type InstagramPost = {
   media_type: string;
 };
 
-export type SectionName = typeof navLinks[number]["name"];
+// export type SectionName = typeof navLinks[number]["name"];

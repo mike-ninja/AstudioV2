@@ -1,15 +1,22 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 import { linktrLink } from "@/lib";
+import { englishText, russianText } from "@/lib";
 import Waves from "./waves";
+import { useLanguage } from "@/context/language-context";
 
 type HeaderProps = {
   headerBackground: string;
 };
 
 export default function Header({ headerBackground }: HeaderProps) {
+  const { language } = useLanguage();
+  const text = language === "english" ? englishText : russianText;
+
   return (
     <header id="home" className="relative h-screen text-white z-0">
       <Image
@@ -20,19 +27,19 @@ export default function Header({ headerBackground }: HeaderProps) {
         className="object-cover z-0"
       />
 
-      <small className="absolute top-4 left-1/2 -translate-x-1/2 text-sm sm:text-lg tracking-widest">
-        TREAT YOUR HAIR
+      <small className="absolute top-4 left-1/2 -translate-x-1/2 text-sm sm:text-lg tracking-widest uppercase">
+        {text.header}
       </small>
 
       <div className="container flex justify-center items-center h-full">
-        <HeaderBox />
+        <HeaderBox buttonText={text.button}/>
       </div>
       <Waves />
     </header>
   );
 }
 
-function HeaderBox() {
+function HeaderBox({ buttonText }: { buttonText: string }) {
   return (
     <div className="z-10 text-center">
       <h1
@@ -53,7 +60,7 @@ function HeaderBox() {
         >
           <div className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 bg-sky-700 z-0 rounded-full transition-all ease-in-out duration-300 group-hover:w-full">
           </div>
-          <span className="text-xl z-10">Book Now</span>
+          <span className="text-xl z-10 capitalize">{buttonText}</span>
         </Link>
       </div>
     </div>

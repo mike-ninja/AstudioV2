@@ -4,7 +4,7 @@ import {
   instagramLink,
   linktrLink,
 } from "./links";
-import { englishText } from "./static";
+import { englishText, russianText } from "./static";
 import { carouselImages } from "./carousel-images";
 import { navScreenPosition } from "./nav-screen-position";
 
@@ -16,4 +16,5 @@ export {
   instagramLink,
   linktrLink,
   navScreenPosition,
+  russianText,
 };

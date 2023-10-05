@@ -9,16 +9,11 @@ import { BsChatHeart } from "react-icons/bs";
 export const navLinks = [
   {
     name: "Home",
-    hash: "#home",
+    link: "/",
     icon: React.createElement(AiOutlineHome),
   },
   {
-    name: "About",
-    hash: "#about",
-    icon: React.createElement(AiOutlineHeart),
-  },
-  {
-    name: "Services",
+    name: "Pricelist",
     hash: "#services",
     icon: React.createElement(BsListCheck),
   },

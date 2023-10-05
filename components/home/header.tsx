@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { linktrLink } from "@/lib";
+import Waves from "./waves";
 
 type HeaderProps = {
   headerBackground: string;
@@ -10,7 +11,7 @@ type HeaderProps = {
 
 export default function Header({ headerBackground }: HeaderProps) {
   return (
-    <header id="home" className="relative h-screen text-white">
+    <header id="home" className="relative h-screen text-white z-0">
       <Image
         src={headerBackground}
         alt="Astudio Larnaca Header"
@@ -26,6 +27,7 @@ export default function Header({ headerBackground }: HeaderProps) {
       <div className="container flex justify-center items-center h-full">
         <HeaderBox />
       </div>
+      <Waves />
     </header>
   );
 }
@@ -49,7 +51,7 @@ function HeaderBox() {
           rel="noreferrer"
           className="flex relative py-3 px-4 group transition-all active:scale-95"
         >
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 bg-sky-700 z-0 rounded-full transition-all group-hover:w-full">
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 bg-sky-700 z-0 rounded-full transition-all ease-in-out duration-300 group-hover:w-full">
           </div>
           <span className="text-xl z-10">Book Now</span>
         </Link>

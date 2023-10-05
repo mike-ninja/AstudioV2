@@ -42,7 +42,7 @@ export default function InstagramGallery() {
   if (loading) {
     return (
       <section id="instagram">
-        <div className="container">
+        <div className="container py-14">
           <InstaBanner />
           <div className="flex justify-center items-center">
             <span>Loading...</span>
@@ -55,10 +55,13 @@ export default function InstagramGallery() {
   if (error) {
     return (
       <section id="instagram">
-        <div className="container">
+        <div className="container py-14">
           <InstaBanner />
           <div className="flex justify-center items-center">
-            <span>Error: {error}</span>
+            <span>
+              An Error has occured getting our instagram post.<br />Please visit
+              our instagram page to see our work!
+            </span>
           </div>
         </div>
       </section>
@@ -67,7 +70,7 @@ export default function InstagramGallery() {
 
   return (
     <section id="instagram">
-      <div className="container">
+      <div className="container py-14">
         <InstaBanner />
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 h-[60rem]">
           {data.map((post) => (
@@ -96,9 +99,9 @@ export default function InstagramGallery() {
 
 function InstaBanner() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center mb-6">
       <div className="border-solid border-b-2 border-stone-400/90 w-32"></div>
-      <h2 className="text-3xl my-3">
+      <h2 className="text-base sm:text-3xl my-3 text-center">
         {englishText.contact.instagram[0]}{" "}
         <Link
           href={instagramLink}

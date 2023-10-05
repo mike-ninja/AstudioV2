@@ -4,7 +4,7 @@ export default function Quote() {
   return (
     <section id="about" className="h-[35rem] flex items-center">
       <div className="container">
-        <p>
+        <p className="text-center">
           Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
           enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
           exercitation amet. Nisi anim cupidatat excepteur officia.

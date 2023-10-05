@@ -1,3 +1,4 @@
+import { Navbar } from "@/components";
 import "./globals.css";
 
 import type { Metadata } from "next";
@@ -21,7 +22,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth no-scrollbar">
-      <body className={`${lato.className}`}>
+      <body className={`${lato.className} relative`}>
+        <Navbar />
         {children}
       </body>
     </html>

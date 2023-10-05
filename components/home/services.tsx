@@ -13,7 +13,7 @@ import useMeasure from "react-use-measure";
 export default function Services() {
   return (
     <section id="services">
-      <div className="container">
+      <div className="container py-14">
         <div className="text-center">
           <h2 className="text-pink-500 mb-2 text-2xl sm:text-3xl">
             <Link href="/pricelist">
@@ -38,7 +38,7 @@ export default function Services() {
             })}
             <div className=""></div>
           </div>
-          <h4 className="text-sm sm:text-base">
+          <h4 className="text-sm sm:text-base mt-4">
             {englishText.services.consultation.text[0]}{" "}
             <Link
               href={linktrLink}
@@ -79,7 +79,7 @@ function Service({ title, description, extra }: ServiceProps) {
   return (
     <div
       onClick={() => setOpen(!isOpen)}
-      className="pt-3 pb-2 sm:pt-6 sm:pb-5"
+      className="pt-3 pb-2 sm:pt-6 sm:pb-5 cursor-pointer"
     >
       <div className="flex justify-between items-center">
         <h2 className="text-xl sm:text-2xl font-bold uppercase text-sky-800">{title}</h2>

@@ -11,7 +11,7 @@ import { carouselImages } from "@/lib";
 
 export default function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    // slidesToScroll: "auto",
+    slidesToScroll: "auto",
     containScroll: "trimSnaps",
   }, [
     WheelGesturesPlugin(),
@@ -23,7 +23,7 @@ export default function Carousel() {
 
   return (
     <section className="flex items-center">
-      <div className="container">
+      <div className="container py-14">
         <div className="relative">
           <div
             ref={emblaRef}
@@ -42,7 +42,7 @@ export default function Carousel() {
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       quality={95}
-                      className="object-cover rounded-md"
+                      className="object-cover rounded-sm"
                     />
                   </div>
                 </div>
@@ -55,7 +55,7 @@ export default function Carousel() {
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={`touch-manipulation inline-flex cursor-pointer border-none p-0 mx-1 w-6 h-2 rounded-full transition-all ${
+              className={`touch-manipulation inline-flex cursor-pointer border-none p-0 mx-1 w-6 h-2 rounded-sm transition-all ${
                 index === selectedIndex
                   ? "bg-pink-500"
                   : "bg-slate-500/50 hover:bg-sky-400/70"

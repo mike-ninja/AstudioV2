@@ -2,12 +2,12 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
+import { useLanguage } from "@/context/language-context";
+import { englishText, instagramLink, russianText } from "@/lib";
 import { InstagramPost } from "@/lib/types";
 import getPosts from "@/instagram/instagram-fetch";
-
-import { englishText, instagramLink } from "@/lib";
-import Link from "next/link";
 
 export default function InstagramGallery() {
   const [data, setData] = useState<InstagramPost[]>([]);
@@ -72,7 +72,7 @@ export default function InstagramGallery() {
     <section id="instagram">
       <div className="container py-8 sm:py-14">
         <InstaBanner />
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 h-[60rem]">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 h-[60rem]">
           {data.map((post) => (
             <Link
               key={post.id}
@@ -86,7 +86,7 @@ export default function InstagramGallery() {
                 alt="Instagram Post Astudio Larnaca"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover rounded-md transition-all hover:scale-95"
+                className="object-cover rounded-md transition-all hover:scale-95 ease-in-out duration-300"
               >
               </Image>
             </Link>
@@ -98,21 +98,25 @@ export default function InstagramGallery() {
 }
 
 function InstaBanner() {
+  const { language } = useLanguage();
+
+  const text = language === "english" ? englishText : russianText;
+
   return (
     <div className="flex flex-col items-center mb-6">
       <div className="border-solid border-b-2 border-stone-400/90 w-32"></div>
       <h2 className="text-base sm:text-3xl my-3 text-center">
-        {englishText.contact.instagram[0]}{" "}
+        {text.contact.instagram[0]}{" "}
         <Link
           href={instagramLink}
           target="_blank"
           rel="noreferrer"
           className="text-pink-500"
         >
-          {englishText.contact.instagram[1]}
+          {text.contact.instagram[1]}
           {" "}
         </Link>{" "}
-        {englishText.contact.instagram[2]}
+        {text.contact.instagram[2]}
         {" "}
       </h2>
       <div className="border-solid border-t-2 border-stone-400/90 w-32"></div>

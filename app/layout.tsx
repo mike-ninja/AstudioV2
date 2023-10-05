@@ -3,12 +3,11 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 
-import { Lato } from "next/font/google";
+import { Inter } from "next/font/google";
 import ActiveLanguageContextProvider from "@/context/language-context";
 
-const lato = Lato({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -23,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth no-scrollbar">
-      <body className={`${lato.className} relative`}>
+      <body className={`${inter.className} relative`}>
         <ActiveLanguageContextProvider>
           <Navbar />
           {children}

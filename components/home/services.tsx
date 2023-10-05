@@ -1,34 +1,37 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { AiOutlinePlus } from "react-icons/ai";
 import { a, useSpring } from "@react-spring/web";
+import useMeasure from "react-use-measure";
+import { useLanguage } from "@/context/language-context";
 
 import Link from "next/link";
 
-import { AiOutlinePlus } from "react-icons/ai";
-
-import { englishText, linktrLink } from "@/lib";
-import useMeasure from "react-use-measure";
+import { englishText, linktrLink, russianText } from "@/lib";
 
 export default function Services() {
+  const { language } = useLanguage();
+  const text = language === "english" ? englishText : russianText;
+
   return (
     <section id="services">
       <div className="container py-8 sm:pb-14">
         <div className="text-center">
           <h2 className="text-pink-500 mb-2 text-2xl sm:text-3xl">
             <Link href="/pricelist">
-              {englishText.services.heading}
+              {text.services.heading}
             </Link>
           </h2>
           <h3 className="text-sm sm:text-base">
-            {englishText.services.cta.text}{" "}
+            {text.services.cta.text}{" "}
             <Link className="text-pink-500" href="/pricelist">
-              here
+              {text.services.cta.tag}
             </Link>
             {" "}
           </h3>
           <div className="">
-            {englishText.services.products.map((service, index) => {
+            {text.services.products.map((service, index) => {
               return (
                 <div key={index}>
                   <Service {...service} />
@@ -39,16 +42,16 @@ export default function Services() {
             <div className=""></div>
           </div>
           <h4 className="text-sm sm:text-base mt-4">
-            {englishText.services.consultation.text[0]}{" "}
+            {text.services.consultation.text[0]}{" "}
             <Link
               href={linktrLink}
               target="_blank"
               rel="noreferrer"
               className="text-pink-500"
             >
-              {englishText.services.consultation.tag}
+              {text.services.consultation.tag}
             </Link>{" "}
-            {englishText.services.consultation.text[1]}
+            {text.services.consultation.text[1]}
           </h4>
         </div>
       </div>
@@ -62,8 +65,13 @@ function usePrevious<T>(value: T) {
   return ref.current;
 }
 
-type ServiceProps = (typeof englishText.services.products)[number];
-function Service({ title, description, extra }: ServiceProps) {
+function Service(
+  { title, description, extra }: {
+    title: string;
+    description: readonly string[];
+    extra: readonly string[];
+  },
+) {
   const [isOpen, setOpen] = useState(false);
   const previous = usePrevious(isOpen);
   const [ref, { height: viewHeight }] = useMeasure();
@@ -82,8 +90,13 @@ function Service({ title, description, extra }: ServiceProps) {
       className="pt-3 pb-2 sm:pt-6 sm:pb-5 cursor-pointer"
     >
       <div className="flex justify-between items-center">
-        <h2 className="text-lg sm:text-2xl font-bold uppercase text-sky-800">{title}</h2>
-        <a.div style={{ transform: transform }} className="rounded-full transition-all ease-in p-1 hover:bg-slate-300">
+        <h2 className="text-lg sm:text-2xl font-bold uppercase text-sky-800">
+          {title}
+        </h2>
+        <a.div
+          style={{ transform: transform }}
+          className="rounded-full transition-all ease-in p-1 hover:bg-slate-300"
+        >
           <AiOutlinePlus
             onClick={() => setOpen(!isOpen)}
             className="cursor-pointer text-xl sm:text-2xl text-slate-600"

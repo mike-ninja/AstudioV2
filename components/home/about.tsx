@@ -1,13 +1,19 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
-import { englishText, linktrLink } from "@/lib";
+import { englishText, linktrLink, russianText } from "@/lib";
 import Link from "next/link";
+import { useLanguage } from "@/context/language-context";
 
 export default function About() {
+  const { language } = useLanguage();
+  const text = language === "english" ? englishText : russianText;
+
   return (
     <section id="about">
       <div className="container grid grid-cols-1 sm:grid-cols-2 py-14">
-        <div className="relative hidden sm:block px-10 h-[35rem]">
+        <div className="relative hidden sm:block px-10 sm:h-[35rem] lg:h-[45rem]">
           <Image
             src="/images/larnaca-hair-studio.webp"
             alt="Hair Salon Larnaca"
@@ -18,9 +24,9 @@ export default function About() {
         </div>
         <div className="flex flex-col justify-center gap-3 sm:mx-10">
           <h2 className="mb-2 text-2xl sm:text-3xl tracking-wide text-pink-500">
-            About AStudio
+            {text.about.heading}
           </h2>
-          {englishText.about.text.map((paragraph, index) => (
+          {text.about.text.map((paragraph, index) => (
             <p key={index} className="text-justify">{paragraph}</p>
           ))}
           <Link
@@ -31,7 +37,7 @@ export default function About() {
           >
             <div className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 bg-sky-500 z-0 rounded-full transition-all ease-in-out duration-300 group-hover:w-full">
             </div>
-            <span className="text-xl z-10">Book Now</span>
+            <span className="text-xl z-10">{text.button}</span>
           </Link>
         </div>
       </div>

@@ -10,8 +10,8 @@ const config: Config = {
     extend: {
       keyframes: {
         wave: {
-          "0%, 100%": { transform: "translateY(5px)" },
-          "50%": { transform: "translateY(40px)" },
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(20px)" },
         },
       },
       animation: {

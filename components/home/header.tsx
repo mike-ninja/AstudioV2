@@ -32,14 +32,14 @@ export default function Header({ headerBackground }: HeaderProps) {
       </small>
 
       <div className="container flex justify-center items-center h-full">
-        <HeaderBox buttonText={text.button}/>
+        <HeaderBox button={text.button} studio={text.studio} />
       </div>
       <Waves />
     </header>
   );
 }
 
-function HeaderBox({ buttonText }: { buttonText: string }) {
+function HeaderBox({ button, studio }: { button: string; studio: string }) {
   return (
     <div className="z-10 text-center">
       <h1
@@ -49,7 +49,7 @@ function HeaderBox({ buttonText }: { buttonText: string }) {
         A&nbsp;Studio
       </h1>
       <h2 className="text-lg sm:text-2xl mb-4">
-        Hair&nbsp;Studio | Larnaca,&nbsp;Cyprus
+        {studio}
       </h2>
       <div className="flex justify-center">
         <Link
@@ -60,7 +60,7 @@ function HeaderBox({ buttonText }: { buttonText: string }) {
         >
           <div className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 bg-sky-700 z-0 rounded-full transition-all ease-in-out duration-300 group-hover:w-full">
           </div>
-          <span className="text-xl z-10 capitalize">{buttonText}</span>
+          <span className="text-xl z-10 capitalize">{button}</span>
         </Link>
       </div>
     </div>

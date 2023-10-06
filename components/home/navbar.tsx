@@ -24,7 +24,7 @@ export default function Navbar() {
           </span>
         </Link>
         <Link
-          href="/pricelist"
+          href="/services"
           className="text-center transition hover:text-pink-500 active:scale-95"
         >
           <span className="block">

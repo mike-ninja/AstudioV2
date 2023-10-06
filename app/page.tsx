@@ -2,7 +2,6 @@ import {
   About,
   CallToAction,
   Carousel,
-  Contact,
   Header,
   InstagramGallery,
   // Quote,
@@ -18,7 +17,6 @@ export default function Home() {
       <Services />
       <CallToAction />
       <InstagramGallery />
-      <Contact />
     </main>
   );
 }

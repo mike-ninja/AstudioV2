@@ -19,13 +19,13 @@ export default function Services() {
       <div className="container py-8 sm:pb-14">
         <div className="text-center">
           <h2 className="text-pink-500 mb-2 text-2xl sm:text-3xl">
-            <Link href="/pricelist">
+            <Link href="/services">
               {text.services.heading}
             </Link>
           </h2>
           <h3 className="text-sm sm:text-base">
             {text.services.cta.text}{" "}
-            <Link className="text-pink-500" href="/pricelist">
+            <Link className="text-pink-500" href="/services">
               {text.services.cta.tag}
             </Link>
             {" "}

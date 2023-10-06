@@ -1,4 +1,4 @@
-import { Navbar } from "@/components";
+import { Contact, Navbar } from "@/components";
 import "./globals.css";
 
 import type { Metadata } from "next";
@@ -26,6 +26,7 @@ export default function RootLayout({
         <ActiveLanguageContextProvider>
           <Navbar />
           {children}
+          <Contact />
         </ActiveLanguageContextProvider>
       </body>
     </html>

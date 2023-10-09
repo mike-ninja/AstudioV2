@@ -20,7 +20,7 @@ export default function Haircuts() {
           {text.services.heading}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-6 lg:gap-12">
-          <div className="py-2 sm:py-6 sm:min-h-[20rem] lg:min-h-[30rem] flex flex-col justify-center">
+          <div className="py-2 sm:py-6 sm:min-h-[32rem] lg:min-h-[40rem] flex flex-col justify-center">
             <h3 className="text-2xl mb-3">
               {priceText.haircuts.heading}
             </h3>

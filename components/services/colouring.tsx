@@ -23,7 +23,7 @@ export default function Colouring() {
               className="object-cover object-top rounded-sm"
             />
           </div>
-          <div className="py-6 sm:min-h-[20rem] lg:min-h-[30rem] flex flex-col justify-center">
+          <div className="py-6 sm:min-h-[32rem] lg:min-h-[40rem] flex flex-col justify-center">
             <h3 className="text-2xl">
               {priceText.colouring.heading}
             </h3>

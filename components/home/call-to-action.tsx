@@ -23,7 +23,7 @@ export default function CallToAction() {
       />
       <div className="container flex">
         <div className="z-10 bg-white/70 w-full text-center py-10 sm:py-16 rounded-md">
-          <h2 className="text-3xl sm:text-6xl italic text-teal-400 font-semibold">
+          <h2 className="text-3xl sm:text-6xl italic text-teal-400 font-normal">
             {text.callToAction.heading}
           </h2>
           <p className="text-lg sm:text-2xl text-sky-800/70 font-normal">

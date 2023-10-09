@@ -72,7 +72,7 @@ export default function InstagramGallery() {
     <section id="instagram">
       <div className="container py-8 sm:py-14">
         <InstaBanner />
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 h-[60rem]">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1 h-[70rem]">
           {data.map((post) => (
             <Link
               key={post.id}
@@ -86,7 +86,7 @@ export default function InstagramGallery() {
                 alt="Instagram Post Astudio Larnaca"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover rounded-md transition-all hover:scale-95 ease-in-out duration-300"
+                className="object-cover transition-all hover:scale-95 ease-in-out duration-300 rounded-sm"
               >
               </Image>
             </Link>
@@ -123,3 +123,29 @@ function InstaBanner() {
     </div>
   );
 }
+
+// function InstagramImageRow({ images }: { images: InstagramPost[] }) {
+//   return (
+//     <>
+//       {images.map((post) => (
+//         <Link
+//           key={post.id}
+//           href={post.permalink}
+//           target="_blank"
+//           rel="noreferer"
+//           className="relative w-1/3 h-1/3"
+//         >
+//           <Image
+//             src={post.media_url}
+//             alt="Instagram Post Astudio Larnaca"
+//             fill
+//             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+//             className="object-cover transition-all hover:scale-95 ease-in-out duration-300"
+//           >
+//           </Image>
+//         </Link>
+//       ))}
+//     </>
+//   );
+// }
+

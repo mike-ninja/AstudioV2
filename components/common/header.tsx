@@ -24,7 +24,7 @@ export default function Header({ headerBackground }: HeaderProps) {
         alt="Astudio Larnaca Header"
         quality={100}
         fill
-        className="object-cover z-0"
+        className="object-cover object-top z-0"
       />
 
       <small className="absolute top-4 left-1/2 -translate-x-1/2 text-sm sm:text-lg tracking-widest uppercase">

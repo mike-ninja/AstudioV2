@@ -15,12 +15,12 @@ export default function Haircuts() {
 
   return (
     <section>
-      <div className="container py-8 sm:pb-14">
-        <h2 className="text-pink-500 mb-8 text-2xl sm:text-3xl text-center">
+      <div className="container pt-8 sm:pb-4">
+        <h2 className="text-pink-500 mb-2 sm:mb-8 text-2xl sm:text-3xl text-center">
           {text.services.heading}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-6 lg:gap-12">
-          <div className="py-6 min-h-[25rem] flex flex-col justify-center">
+          <div className="py-2 sm:py-6 sm:min-h-[20rem] lg:min-h-[30rem] flex flex-col justify-center">
             <h3 className="text-2xl mb-3">
               {priceText.haircuts.heading}
             </h3>
@@ -37,10 +37,10 @@ export default function Haircuts() {
           </div>
           <div className="relative hidden sm:block">
             <Image
-              src="/images/larnaca-hair.webp"
+              src="/images/service-image-one.webp"
               alt="Hair Salon in Larnaca"
               fill
-              className="object-cover"
+              className="object-cover rounded-sm"
             />
           </div>
         </div>

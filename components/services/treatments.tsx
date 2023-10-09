@@ -13,17 +13,17 @@ export default function Treatments() {
 
   return (
     <section>
-      <div className="container py-8 sm:pb-14">
+      <div className="container sm:pt-4 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-6 lg:gap-12">
           <div className="relative hidden sm:block">
             <Image
-              src="/images/larnaca-hair.webp"
+              src="/images/service-image-four.webp"
               alt="Hair Salon in Larnaca"
               fill
-              className="object-cover"
+              className="object-cover rounded-sm object-top"
             />
           </div>
-          <div className="py-6 min-h-[25rem] flex flex-col justify-center">
+          <div className="py-6 sm:min-h-[20rem] lg:min-h-[30rem] flex flex-col justify-center">
             <h3 className="text-2xl mb-3">
               {priceText.treatments.heading}
             </h3>

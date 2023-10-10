@@ -18,12 +18,12 @@ export default function Services() {
     <section id="services">
       <div className="container py-8 sm:pb-14">
         <div className="text-center">
-          <h2 className="text-pink-500 mb-2 text-2xl sm:text-3xl">
+          <h2 className="text-pink-500 mb-2 text-2xl sm:text-3xl font-semibold transition active:scale-95">
             <Link href="/services">
               {text.services.heading}
             </Link>
           </h2>
-          <h3 className="text-sm sm:text-base">
+          <h3 className="text-xs sm:text-base">
             {text.services.cta.text}{" "}
             <Link className="text-pink-500" href="/services">
               {text.services.cta.tag}
@@ -41,7 +41,7 @@ export default function Services() {
             })}
             <div className=""></div>
           </div>
-          <h4 className="text-sm sm:text-base mt-4">
+          <h4 className="text-xs sm:text-base mt-4">
             {text.services.consultation.text[0]}{" "}
             <Link
               href={linktrLink}
@@ -90,7 +90,7 @@ function Service(
       className="pt-3 pb-2 sm:pt-6 sm:pb-5 cursor-pointer"
     >
       <div className="flex justify-between items-center">
-        <h2 className="text-lg sm:text-2xl font-bold uppercase text-sky-800">
+        <h2 className="text-lg sm:text-2xl uppercase text-sky-800">
           {title}
         </h2>
         <a.div

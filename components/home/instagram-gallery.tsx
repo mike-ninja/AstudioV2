@@ -103,9 +103,9 @@ function InstaBanner() {
   const text = language === "english" ? englishText : russianText;
 
   return (
-    <div className="flex flex-col items-center mb-6">
-      <div className="border-solid border-b-2 border-stone-400/90 w-32"></div>
-      <h2 className="text-base sm:text-3xl my-3 text-center">
+    <div className="flex flex-col items-center mb-8 sm:mb-14">
+      <div className="border-solid border-b-2 border-stone-600/60 w-20"></div>
+      <h2 className="text-base sm:text-3xl my-2 sm:my-5 text-center">
         {text.contact.instagram[0]}{" "}
         <Link
           href={instagramLink}
@@ -119,7 +119,7 @@ function InstaBanner() {
         {text.contact.instagram[2]}
         {" "}
       </h2>
-      <div className="border-solid border-t-2 border-stone-400/90 w-32"></div>
+      <div className="border-solid border-t-2 border-stone-600/60 w-20"></div>
     </div>
   );
 }

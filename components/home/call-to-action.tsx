@@ -22,11 +22,11 @@ export default function CallToAction() {
         className="object-cover z-0"
       />
       <div className="container flex">
-        <div className="z-10 bg-white/70 w-full text-center py-10 sm:py-16 rounded-md">
-          <h2 className="text-3xl sm:text-6xl italic text-teal-400 font-normal">
+        <div className="z-10 bg-white/80 w-full text-center py-10 sm:py-24 rounded-lg">
+          <h2 className="text-2xl sm:text-6xl italic text-teal-400 mb-0 sm:mb-4">
             {text.callToAction.heading}
           </h2>
-          <p className="text-lg sm:text-2xl text-sky-800/70 font-normal">
+          <p className="text-base sm:text-2xl text-sky-800/70">
             {text.callToAction.cta[0]}{" "}
             <Link
               href={linktrLink}
@@ -40,7 +40,7 @@ export default function CallToAction() {
         </div>
       </div>
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-full">
-        <p className="text-white text-sm sm:text-lg font-normal text-center">
+        <p className="text-white text-xs sm:text-lg text-center">
           {text.callToAction.cta[2]}{"  "}
           <Link href="#contact" className="text-pink-500">
             {text.callToAction.cta[3]}

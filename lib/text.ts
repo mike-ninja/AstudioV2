@@ -91,6 +91,7 @@ export const englishText = {
       "Address",
       "Phone",
     ],
+    businessHours: "Business Hours: Upon booked appointment",
   },
   additionalInformation: {
     heading: "Additional Information",
@@ -198,6 +199,7 @@ export const russianText = {
       "Адрес",
       "Телефон",
     ],
+    businessHours: "Часы работы: По бронированию",
   },
   additionalInformation: {
     heading: "Дополнительная информация",

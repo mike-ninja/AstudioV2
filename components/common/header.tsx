@@ -27,7 +27,7 @@ export default function Header({ headerBackground }: HeaderProps) {
         className="object-cover object-top z-0"
       />
 
-      <small className="absolute top-4 left-1/2 -translate-x-1/2 text-sm sm:text-lg tracking-widest uppercase">
+      <small className="absolute top-4 left-1/2 -translate-x-1/2 text-sm sm:text-lg tracking-widest uppercase italic">
         {text.header}
       </small>
 

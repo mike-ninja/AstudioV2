@@ -25,7 +25,10 @@ export default function Services() {
           </h2>
           <h3 className="text-xs sm:text-base">
             {text.services.cta.text}{" "}
-            <Link className="text-pink-500 transition-all duration-500 ease-in-out active:scale-95 hover:text-sky-900" href="/services">
+            <Link
+              className="text-pink-500 transition-all duration-500 ease-in-out active:scale-95 hover:text-sky-900"
+              href="/services"
+            >
               {text.services.cta.tag}
             </Link>
             {" "}
@@ -66,10 +69,9 @@ function usePrevious<T>(value: T) {
 }
 
 function Service(
-  { title, description, extra }: {
+  { title, description }: {
     title: string;
     description: readonly string[];
-    extra: readonly string[];
   },
 ) {
   const [isOpen, setOpen] = useState(false);

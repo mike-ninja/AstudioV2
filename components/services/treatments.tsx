@@ -24,11 +24,11 @@ export default function Treatments() {
             />
           </div>
           <div className="py-6 sm:min-h-[32rem] lg:min-h-[40rem] flex flex-col justify-center">
-            <h3 className="text-2xl mb-3 capitalize">
+            <h3 className="text-lg sm:text-2xl uppercase text-sky-800 mb-3">
               {priceText.treatments.heading}
             </h3>
             {priceText.treatments.services.map((service, index) => (
-              <span key={index} className="flex mb-2 last:mb-0">
+              <span key={index} className="flex mb-2 last:mb-0 text-sm sm:text-base">
                 <span className="flex-grow">
                   {service.title.map((item, index) => (
                     <h4 key={index}>{item}</h4>

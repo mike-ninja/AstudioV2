@@ -32,7 +32,7 @@ export default function CallToAction() {
               href={linktrLink}
               target="_blank"
               rel="noreferrer"
-              className="text-pink-500"
+              className="text-teal-400 transition-all duration-500 ease-in-out active:scale-95 hover:text-pink-500"
             >
               {text.callToAction.cta[1]}
             </Link>
@@ -42,7 +42,10 @@ export default function CallToAction() {
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-full">
         <p className="text-white text-xs sm:text-lg text-center">
           {text.callToAction.cta[2]}{"  "}
-          <Link href="#contact" className="text-pink-500">
+          <Link
+            href="#contact"
+            className="text-teal-400 transition-all duration-500 ease-in-out active:scale-95 hover:text-pink-500"
+          >
             {text.callToAction.cta[3]}
           </Link>
         </p>

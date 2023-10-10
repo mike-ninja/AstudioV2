@@ -16,16 +16,16 @@ export default function Haircuts() {
   return (
     <section>
       <div className="container pt-8 sm:pb-4">
-        <h2 className="text-pink-500 mb-2 sm:mb-8 text-2xl sm:text-3xl text-center">
+        <h2 className="text-pink-500 mb-2 sm:mb-8 text-2xl sm:text-3xl text-center font-semibold">
           {text.services.heading}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-6 lg:gap-12">
           <div className="py-2 sm:py-6 sm:min-h-[32rem] lg:min-h-[40rem] flex flex-col justify-center">
-            <h3 className="text-2xl mb-3">
+            <h3 className="text-lg sm:text-2xl uppercase text-sky-800 mb-3">
               {priceText.haircuts.heading}
             </h3>
             {priceText.haircuts.services.map((service, index) => (
-              <span key={index} className="flex mb-2 last:mb-0">
+              <span key={index} className="flex mb-2 last:mb-0 text-sm sm:text-base">
                 <span className="flex-grow">
                   {service.title.map((item, index) => (
                     <h4 key={index}>{item}</h4>

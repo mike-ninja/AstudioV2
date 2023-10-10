@@ -24,9 +24,6 @@ export const englishText = {
           "Men (scissors / trimmer)",
           "Children (until 12y)",
         ],
-        extra: [
-          "+ Standard hair style: (Wash & Brushing)",
-        ],
       },
       {
         title: "Colouring",
@@ -35,9 +32,6 @@ export const englishText = {
           "Toning",
           "Highlights",
           "All other colouring techniques (Balayage, Shatush, Airtouch, Handtouch, Ombre, Hair Contouring, Mix of techniques & more)",
-        ],
-        extra: [
-          "+ Standard hair style: (Wash & Brushing)",
         ],
       },
       {
@@ -48,7 +42,6 @@ export const englishText = {
           "Hair straightening",
           "Curling",
         ],
-        extra: [],
       },
       {
         title: "Hair Treatments",
@@ -57,9 +50,6 @@ export const englishText = {
           "4-step Botugen Hair Ritual",
           "FULL EGOBOND 3-step Treatment",
           "Adding BOND 1 (Booster) for colouring & blond",
-        ],
-        extra: [
-          "+ Standard hair style: (Wash & Brushing)",
         ],
       },
     ],
@@ -131,9 +121,6 @@ export const russianText = {
           "Мужские (ножницы / триммер)",
           "Детские (до 12 лет)",
         ],
-        extra: [
-          "+ Standard hair style: (Wash & Brushing)",
-        ],
       },
       {
         title: "Окрашивание",
@@ -144,9 +131,6 @@ export const russianText = {
           "Мелирование (корни (до 5см) / половина / полностью)",
           "Сложные орашивания (Balayage, Shatush, Airtouch, Handtouch, Ombre, ect.)",
         ],
-        extra: [
-          "+ Standard hair style: (Wash & Brushing)",
-        ],
       },
       {
         title: "Hair Styling",
@@ -156,7 +140,6 @@ export const russianText = {
           "Утюг",
           "Beach waves",
         ],
-        extra: [],
       },
       {
         title: "Hair Treatments",
@@ -165,9 +148,6 @@ export const russianText = {
           "4-step Botugen Hair Ritual",
           "FULL EGOBOND 3-step Treatment (Spa процедура для восстановления)",
           "Добавление BOND 1 (Booster) в краску & блонд (8гр)",
-        ],
-        extra: [
-          "+ Standard hair style: (Wash & Brushing)",
         ],
       },
     ],

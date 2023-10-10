@@ -24,14 +24,14 @@ export default function Colouring() {
             />
           </div>
           <div className="py-6 sm:min-h-[32rem] lg:min-h-[40rem] flex flex-col justify-center">
-            <h3 className="text-2xl">
+            <h3 className="text-lg sm:text-2xl uppercase text-sky-800">
               {priceText.colouring.heading}
             </h3>
             <h5 className="mb-3 text-xs sm:text-sm">
               {priceText.colouring.description}
             </h5>
             {priceText.colouring.services.map((service, index) => (
-              <span key={index} className="block mb-2 last:mb-0">
+              <span key={index} className="block mb-2 last:mb-0 text-sm sm:text-base">
                 <h4>{service.title}</h4>
                 {service.options.map((item, index) => (
                   <span

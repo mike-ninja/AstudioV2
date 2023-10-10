@@ -1,6 +1,6 @@
 export const carouselImages = [
   {
-    image: "/images/atmosphere-astudio.webp",
+    image: "/images/atmosphere-studio-salon.webp",
     alt: "Hair Salon Cyprus",
   },
   {
@@ -16,7 +16,7 @@ export const carouselImages = [
     alt: "Larnaca Hair Salon",
   },
   {
-    image: "/images/atmosphere-studio-salon.webp",
+    image: "/images/atmosphere-astudio.webp",
     alt: "Larnaca Hair Studio",
   },
   {

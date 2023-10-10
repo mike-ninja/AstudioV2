@@ -88,7 +88,7 @@ export const englishPricelist = {
   colouring: {
     heading: "Colouring",
     description:
-      "*Prices for colouring are not including the use of materials. Materials used: AlterEgo Italy",
+      "*Prices for colouring are not including the use of materials. Materials: AlterEgo Italy",
     services: [
       {
         title: "Roots",
@@ -275,7 +275,7 @@ export const russianPricelist = {
   colouring: {
     heading: "Окрашивание",
     description:
-      "* Цены на окрашивания указаны без учета расходных материалов Материалы AlterEgo Italy",
+      "* Цены на окрашивания указаны без учета расходных материалов. Материалы: AlterEgo Italy",
     services: [
       {
         title: "Окрашивание корней",

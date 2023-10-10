@@ -111,7 +111,7 @@ function InstaBanner() {
           href={instagramLink}
           target="_blank"
           rel="noreferrer"
-          className="text-pink-500"
+          className="text-pink-500 transition-all duration-500 ease-in-out active:scale-95 hover:text-sky-900"
         >
           {text.contact.instagram[1]}
           {" "}
@@ -148,4 +148,3 @@ function InstaBanner() {
 //     </>
 //   );
 // }
-

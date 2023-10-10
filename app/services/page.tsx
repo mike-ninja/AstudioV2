@@ -1,5 +1,12 @@
 import React from "react";
-import { Colouring, Haircuts, Header, Styling, Treatments } from "@/components";
+import {
+  AdditionalInformation,
+  Colouring,
+  Haircuts,
+  Header,
+  Styling,
+  Treatments,
+} from "@/components";
 
 export default function ServicePage() {
   return (
@@ -9,6 +16,7 @@ export default function ServicePage() {
       <Colouring />
       <Styling />
       <Treatments />
+      <AdditionalInformation />
     </main>
   );
 }

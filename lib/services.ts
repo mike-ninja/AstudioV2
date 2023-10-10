@@ -4,76 +4,76 @@ export const englishPricelist = {
     services: [
       {
         title: [
-          "Women's Haircut",
+          "Women's haircut",
           "(short/medium/long hair)",
         ],
         price: "15/25/35",
       },
       {
         title: [
-          "Стрижка",
-          "(кончики, по форме)",
+          "Women’s Haircut",
+          "(ends/new shape)",
         ],
         price: "15",
       },
       {
         title: [
-          "Прямой срез",
+          "Straight Cut",
         ],
         price: "12",
       },
       {
         title: [
-          "Стрижка челки",
+          "Bangs",
         ],
         price: "7",
       },
       {
         title: [
-          "Полировка по длине",
+          "Length polishing",
         ],
         price: "25",
       },
       {
         title: [
-          "Стрижка мужская",
+          "Men’s Haircut",
         ],
         price: "20/25",
       },
       {
         title: [
-          "Стрижка машинкой мужская",
+          "Trimmer",
         ],
         price: "15",
       },
       {
         title: [
-          "Стрижка детская (до 12 лет)",
+          "Children’s haircut (until 12 years old)",
         ],
         price: "15",
       },
     ],
-    addons: "+ 10 Мытье & Стандартная укладка (Брашинг)",
+    addons: "+ 10 Wash & Standard Hairstyle (Brushing)",
   },
   styling: {
     heading: "Styling",
-    description: "Стандартная укладка",
+    description: "Standard",
     services: [
       {
         title: [
-          "Мытье + Брашинг",
+          "Wash + brushing",
         ],
         price: "10",
       },
       {
         title: [
-          "Плойка Конус / Щипцы / Гафре",
+          "Curler",
         ],
         price: "+5",
       },
       {
         title: [
-          "Утюг",
+          "Iron",
         ],
         price: "+7",
       },
@@ -88,48 +88,48 @@ export const englishPricelist = {
   colouring: {
     heading: "Colouring",
     description:
-      "* Цены на окрашивания указаны без учета расходных материалов Материалы AlterEgo Italy",
+      "*Prices for colouring are not including the use of materials. Materials used: AlterEgo Italy",
     services: [
       {
-        title: "Окрашивание корней",
+        title: "Roots",
         options: [
           {
-            title: "краской",
+            title: "colour",
             price: "30",
           },
           {
-            title: "осветляющим порошком (крем)",
+            title: "bleaching powder (cream)",
             price: "35",
           },
         ],
       },
       {
-        title: "Окрашивание по длине / тон-в-тон",
+        title: "Length colouring / same tone",
         options: [
           {
-            title: "(короткие/средние/длинные волосы)",
+            title: "(short/medium/long hair)",
             price: "40/50/60",
           },
         ],
       },
       {
-        title: "Тонирование",
+        title: "Toning",
         options: [
           {
-            title: "тон-в-тон (короткие/средние/длинные волосы)",
+            title: "same tone (short/medium/long hair)",
             price: "40/50/60",
           },
           {
-            title: "после блондирования",
+            title: "after blonde",
             price: "30",
           },
         ],
       },
       {
-        title: "Мелирование",
+        title: "Highlights",
         options: [
           {
-            title: "корни (до 5см)",
+            title: "roots (until 5cm)",
             price: "50",
           },
           {
@@ -143,23 +143,23 @@ export const englishPricelist = {
         ],
       },
       {
-        title: "Сложное орашивание",
+        title: "Difficult colouring techniques",
         options: [
           {
             title: "Balayage, Shatush, Airtouch, Handtouch, Ombre, ect.",
-            price: "от 100",
+            price: "from 100",
           },
         ],
       },
     ],
-    addons: "+ 10 Мытье & Стандартная укладка (Брашинг)",
+    addons: "+ 10 Wash & Standard Hairstyle (Brushing)",
   },
   treatments: {
     heading: "Treatments",
     services: [
       {
         title: [
-          "GK Восстановление",
+          "GK Repair",
         ],
         price: "25",
       },
@@ -167,17 +167,17 @@ export const englishPricelist = {
         title: [
           "4-step Botugen Hair Ritual",
         ],
-        price: "50 + расход",
+        price: "50 + use",
       },
       {
         title: [
           "FULL EGOBOND 3-step Treatment",
         ],
-        price: "50 + расход",
+        price: "50 + use",
       },
       {
         title: [
-          "Добавление BOND 1 (Booster) в краску & блонд (8гр)",
+          "Add BOND 1 (Booster) to colouring & blond (8g)",
         ],
         price: "10",
       },
@@ -187,7 +187,7 @@ export const englishPricelist = {
 
 export const russianPricelist = {
   haircuts: {
-    heading: "Haircuts",
+    heading: "Стрижки",
     services: [
       {
         title: [
@@ -273,7 +273,7 @@ export const russianPricelist = {
     ],
   },
   colouring: {
-    heading: "Colouring",
+    heading: "Окрашивание",
     description:
       "* Цены на окрашивания указаны без учета расходных материалов Материалы AlterEgo Italy",
     services: [

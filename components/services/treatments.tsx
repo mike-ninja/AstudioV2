@@ -3,13 +3,13 @@
 import React from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/language-context";
-import { englishPricelist } from "@/lib";
+import { englishPricelist, russianPricelist } from "@/lib";
 
 export default function Treatments() {
   const { language } = useLanguage();
   const priceText = language === "english"
     ? englishPricelist
-    : englishPricelist;
+    : russianPricelist;
 
   return (
     <section>
@@ -24,7 +24,7 @@ export default function Treatments() {
             />
           </div>
           <div className="py-6 sm:min-h-[32rem] lg:min-h-[40rem] flex flex-col justify-center">
-            <h3 className="text-2xl mb-3">
+            <h3 className="text-2xl mb-3 capitalize">
               {priceText.treatments.heading}
             </h3>
             {priceText.treatments.services.map((service, index) => (

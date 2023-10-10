@@ -92,6 +92,16 @@ export const englishText = {
       "Phone",
     ],
   },
+  additionalInformation: {
+    heading: "Additional Information",
+    information: [
+      "At A Studio you can always book a free online/offline consultation (15 min)",
+      "-10% off for your birthday",
+      "+20% on any type of service if you have hair extensions",
+      "-20% if the appointment was delayed for more than 20 minutes due to the fault of the master",
+      "If the client is late for more than 15 minutes, the appointment is canceled",
+    ],
+  },
 } as const;
 
 export const russianText = {
@@ -187,6 +197,16 @@ export const russianText = {
       "Контакты",
       "Адрес",
       "Телефон",
+    ],
+  },
+  additionalInformation: {
+    heading: "Дополнительная информация",
+    information: [
+      "В A Studio всегда можно забронировать бесплатную онлайн/оффлайн консультацию (15 мин)",
+      "-10% в честь дня рождения",
+      "+20% на любой вид услуг, если наращённые волосы",
+      "-20% если запись задержалась больше чем 20 минут по вине мастера",
+      "Если клиент опоздал более, чем на 15 минут, запись отменяется",
     ],
   },
 } as const;

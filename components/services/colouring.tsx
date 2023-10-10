@@ -3,13 +3,13 @@
 import React from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/language-context";
-import { englishPricelist } from "@/lib";
+import { englishPricelist, russianPricelist } from "@/lib";
 
 export default function Colouring() {
   const { language } = useLanguage();
   const priceText = language === "english"
     ? englishPricelist
-    : englishPricelist;
+    : russianPricelist;
 
   return (
     <section>

@@ -6,8 +6,7 @@ import {
 } from "./links";
 import { englishText, russianText } from "./text";
 import { carouselImages } from "./carousel-images";
-import { navScreenPosition } from "./nav-screen-position";
-import { englishPricelist } from "./services";
+import { englishPricelist, russianPricelist } from "./services";
 
 export {
   addressLink,
@@ -17,6 +16,6 @@ export {
   instagramApiLink,
   instagramLink,
   linktrLink,
-  navScreenPosition,
+  russianPricelist,
   russianText,
 };

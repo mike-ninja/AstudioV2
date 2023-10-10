@@ -4,14 +4,14 @@ import React from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/language-context";
 import { englishText, russianText } from "@/lib";
-import { englishPricelist } from "@/lib";
+import { englishPricelist, russianPricelist } from "@/lib";
 
 export default function Haircuts() {
   const { language } = useLanguage();
   const text = language === "english" ? englishText : russianText;
   const priceText = language === "english"
     ? englishPricelist
-    : englishPricelist;
+    : russianPricelist;
 
   return (
     <section>

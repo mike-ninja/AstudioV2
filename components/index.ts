@@ -11,9 +11,11 @@ import Haircuts from "./services/haircuts";
 import Colouring from "./services/colouring";
 import Styling from "./services/styling";
 import Treatments from "./services/treatments";
+import AdditionalInformation from "./services/additional-information";
 
 export {
   About,
+  AdditionalInformation,
   CallToAction,
   Carousel,
   Colouring,

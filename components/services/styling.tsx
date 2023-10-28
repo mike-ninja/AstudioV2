@@ -30,12 +30,12 @@ export default function Styling() {
               </span>
             ))}
           </div>
-          <div className="relative hidden sm:block">
+          <div className="relative hidden sm:block overflow-hidden">
             <Image
               src="/images/service-image-three.webp"
               alt="Hair Salon in Larnaca"
               fill
-              className="object-cover rounded-sm object-top"
+              className="object-cover rounded-sm object-top hover:scale-105 transition-all duration-500"
             />
           </div>
         </div>

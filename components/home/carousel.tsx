@@ -35,14 +35,14 @@ export default function Carousel() {
                   key={index}
                   className="flex-grow-0 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 pl-4 h-[25rem] sm:h-[40rem]"
                 >
-                  <div className="relative h-full w-full">
+                  <div className="relative h-full w-full overflow-hidden">
                     <Image
                       src={image.image}
                       alt={image.alt}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       quality={95}
-                      className="object-cover rounded-sm"
+                      className="object-cover rounded-sm hover:scale-105 transition-all duration-500"
                     />
                   </div>
                 </div>

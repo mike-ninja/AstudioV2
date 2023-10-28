@@ -13,13 +13,13 @@ export default function About() {
   return (
     <section id="about">
       <div className="container grid grid-cols-1 sm:grid-cols-2 py-14">
-        <div className="relative hidden sm:block px-10 sm:h-[35rem] lg:h-[45rem]">
+        <div className="relative hidden sm:block px-10 sm:h-[35rem] lg:h-[45rem] overflow-hidden">
           <Image
             src="/images/larnaca-hair-studio.webp"
             alt="Hair Salon Larnaca"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover object-top rounded-sm"
+            className="object-cover object-top rounded-sm hover:scale-105 transition-all duration-500"
           />
         </div>
         <div className="flex flex-col justify-center gap-3 sm:mx-10">

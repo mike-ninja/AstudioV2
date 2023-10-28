@@ -35,12 +35,12 @@ export default function Haircuts() {
               </span>
             ))}
           </div>
-          <div className="relative hidden sm:block">
+          <div className="relative hidden sm:block overflow-hidden">
             <Image
               src="/images/service-image-one.webp"
               alt="Hair Salon in Larnaca"
               fill
-              className="object-cover rounded-sm"
+              className="object-cover rounded-sm hover:scale-105 transition-all duration-500"
             />
           </div>
         </div>

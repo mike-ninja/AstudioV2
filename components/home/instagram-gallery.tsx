@@ -79,14 +79,14 @@ export default function InstagramGallery() {
               href={post.permalink}
               target="_blank"
               rel="noreferer"
-              className="relative"
+              className="relative overflow-hidden"
             >
               <Image
                 src={post.media_url}
                 alt="Instagram Post Astudio Larnaca"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover transition-all hover:scale-95 ease-in-out duration-300 rounded-sm"
+                className="object-cover transition-all hover:scale-105 ease-in-out duration-500 rounded-sm"
               >
               </Image>
             </Link>

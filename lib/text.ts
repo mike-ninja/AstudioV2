@@ -1,4 +1,5 @@
 export const englishText = {
+  priceUpdate: "Prices updated: 01.01.2024",
   button: "Book Now",
   header: "Treat Your Hair",
   studio: "Hair Studio | Larnaca, Cyprus",
@@ -96,6 +97,7 @@ export const englishText = {
 } as const;
 
 export const russianText = {
+  priceUpdate: "Цены обновлены: 01.01.2024",
   button: "Записаться",
   header: "Позаботьтесь о своих волосах",
   studio: "Студия красоты | Ларнака, Кипр",

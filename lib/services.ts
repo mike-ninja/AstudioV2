@@ -7,44 +7,25 @@ export const englishPricelist = {
           "Women's haircut",
           "(short/medium/long hair)",
         ],
-        price: "15/25/35",
-      },
-      {
-        title: [
-          "Women’s Haircut",
-          "(ends/new shape)",
-        ],
-        price: "15",
-      },
-      {
-        title: [
-          "Straight Cut",
-        ],
-        price: "12",
+        price: "20/40/50",
       },
       {
         title: [
           "Bangs",
         ],
-        price: "7",
+        price: "15",
       },
       {
         title: [
           "Length polishing",
         ],
-        price: "25",
+        price: "40",
       },
       {
         title: [
           "Men’s Haircut",
         ],
-        price: "20/25",
-      },
-      {
-        title: [
-          "Trimmer",
-        ],
-        price: "15",
+        price: "20",
       },
       {
         title: [
@@ -53,53 +34,39 @@ export const englishPricelist = {
         price: "15",
       },
     ],
-    addons: "+ 10 Wash & Standard Hairstyle (Brushing)",
   },
   styling: {
     heading: "Styling",
-    description: "Standard",
     services: [
       {
         title: [
-          "Wash + brushing",
+          "Brushing",
         ],
-        price: "10",
+        price: "20",
       },
       {
         title: [
-          "Curler",
+          "Curler, Iron, Beach waves, etc",
         ],
-        price: "+5",
-      },
-      {
-        title: [
-          "Iron",
-        ],
-        price: "+7",
-      },
-      {
-        title: [
-          "Beach waves",
-        ],
-        price: "+10",
+        price: "25",
       },
     ],
   },
   colouring: {
     heading: "Colouring",
     description:
-      "*Prices for colouring are not including the use of materials. Materials: AlterEgo Italy",
+      "*Prices for colouring includes the use of materials plus wahing & brushing. Materials: AlterEgo Italy",
     services: [
       {
         title: "Roots",
         options: [
           {
             title: "colour",
-            price: "30",
+            price: "40",
           },
           {
             title: "bleaching powder (cream)",
-            price: "35",
+            price: "45",
           },
         ],
       },
@@ -108,7 +75,7 @@ export const englishPricelist = {
         options: [
           {
             title: "(short/medium/long hair)",
-            price: "40/50/60",
+            price: "50/60/70",
           },
         ],
       },
@@ -117,11 +84,11 @@ export const englishPricelist = {
         options: [
           {
             title: "same tone (short/medium/long hair)",
-            price: "40/50/60",
+            price: "50/60/70",
           },
           {
             title: "after blonde",
-            price: "30",
+            price: "40",
           },
         ],
       },
@@ -129,16 +96,8 @@ export const englishPricelist = {
         title: "Highlights",
         options: [
           {
-            title: "roots (until 5cm)",
-            price: "50",
-          },
-          {
-            title: "full",
-            price: "90",
-          },
-          {
-            title: "half",
-            price: "70",
+            title: "Depends on the amount",
+            price: "70-120",
           },
         ],
       },
@@ -147,22 +106,15 @@ export const englishPricelist = {
         options: [
           {
             title: "Balayage, Shatush, Airtouch, Handtouch, Ombre, ect.",
-            price: "from 100",
+            price: "from 150",
           },
         ],
       },
     ],
-    addons: "+ 10 Wash & Standard Hairstyle (Brushing)",
   },
   treatments: {
     heading: "Treatments",
     services: [
-      {
-        title: [
-          "GK Repair",
-        ],
-        price: "25",
-      },
       {
         title: [
           "4-step Botugen Hair Ritual",
@@ -179,7 +131,7 @@ export const englishPricelist = {
         title: [
           "Add BOND 1 (Booster) to colouring & blond (8g)",
         ],
-        price: "10",
+        price: "15",
       },
     ],
   },
@@ -194,44 +146,25 @@ export const russianPricelist = {
           "Стрижка женская",
           "(короткие/средние/длинные волосы)",
         ],
-        price: "15/25/35",
-      },
-      {
-        title: [
-          "Стрижка",
-          "(кончики, по форме)",
-        ],
-        price: "15",
-      },
-      {
-        title: [
-          "Прямой срез",
-        ],
-        price: "12",
+        price: "20/40/50",
       },
       {
         title: [
           "Стрижка челки",
         ],
-        price: "7",
+        price: "15",
       },
       {
         title: [
           "Полировка по длине",
         ],
-        price: "25",
+        price: "40",
       },
       {
         title: [
           "Стрижка мужская",
         ],
-        price: "20/25",
-      },
-      {
-        title: [
-          "Стрижка машинкой мужская",
-        ],
-        price: "15",
+        price: "20",
       },
       {
         title: [
@@ -240,7 +173,6 @@ export const russianPricelist = {
         price: "15",
       },
     ],
-    addons: "+ 10 Мытье & Стандартная укладка (Брашинг)",
   },
   styling: {
     heading: "Styling",
@@ -248,45 +180,33 @@ export const russianPricelist = {
     services: [
       {
         title: [
-          "Мытье + Брашинг",
+          "Брашинг",
         ],
-        price: "10",
+        price: "20",
       },
       {
         title: [
-          "Плойка Конус / Щипцы / Гафре",
+          "Плойка Конус / Щипцы / Гафре / Утюг / Beach waves",
         ],
-        price: "+5",
-      },
-      {
-        title: [
-          "Утюг",
-        ],
-        price: "+7",
-      },
-      {
-        title: [
-          "Beach waves",
-        ],
-        price: "+10",
+        price: "25",
       },
     ],
   },
   colouring: {
     heading: "Окрашивание",
     description:
-      "* Цены на окрашивания указаны без учета расходных материалов. Материалы: AlterEgo Italy",
+      "* Цены на окрашивания указаны с учетом расходных материалов. Мытье & укладка на брашинг включены в стоимость. Материалы: AlterEgo Italy",
     services: [
       {
         title: "Окрашивание корней",
         options: [
           {
             title: "краской",
-            price: "30",
+            price: "40",
           },
           {
             title: "осветляющим порошком (крем)",
-            price: "35",
+            price: "45",
           },
         ],
       },
@@ -295,7 +215,7 @@ export const russianPricelist = {
         options: [
           {
             title: "(короткие/средние/длинные волосы)",
-            price: "40/50/60",
+            price: "50/60/70",
           },
         ],
       },
@@ -304,11 +224,11 @@ export const russianPricelist = {
         options: [
           {
             title: "тон-в-тон (короткие/средние/длинные волосы)",
-            price: "40/50/60",
+            price: "50/60/70",
           },
           {
             title: "после блондирования",
-            price: "30",
+            price: "40",
           },
         ],
       },
@@ -316,16 +236,8 @@ export const russianPricelist = {
         title: "Мелирование",
         options: [
           {
-            title: "корни (до 5см)",
-            price: "50",
-          },
-          {
-            title: "full",
-            price: "90",
-          },
-          {
-            title: "half",
-            price: "70",
+            title: "Зависит от количества",
+            price: "70-120",
           },
         ],
       },
@@ -334,22 +246,15 @@ export const russianPricelist = {
         options: [
           {
             title: "Balayage, Shatush, Airtouch, Handtouch, Ombre, ect.",
-            price: "от 100",
+            price: "от 150",
           },
         ],
       },
     ],
-    addons: "+ 10 Мытье & Стандартная укладка (Брашинг)",
   },
   treatments: {
     heading: "Treatments",
     services: [
-      {
-        title: [
-          "GK Восстановление",
-        ],
-        price: "25",
-      },
       {
         title: [
           "4-step Botugen Hair Ritual",
@@ -366,7 +271,7 @@ export const russianPricelist = {
         title: [
           "Добавление BOND 1 (Booster) в краску & блонд (8гр)",
         ],
-        price: "10",
+        price: "15",
       },
     ],
   },

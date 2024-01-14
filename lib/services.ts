@@ -1,6 +1,7 @@
 export const englishPricelist = {
   haircuts: {
     heading: "Haircuts",
+    description: "Price includes washing & brushing",
     services: [
       {
         title: [
@@ -140,6 +141,7 @@ export const englishPricelist = {
 export const russianPricelist = {
   haircuts: {
     heading: "Стрижки",
+    description: "Цена включая мытье & укладку на брашинг",
     services: [
       {
         title: [

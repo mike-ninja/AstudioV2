@@ -8,7 +8,7 @@ export const englishPricelist = {
           "Women's haircut",
           "(short/medium/long hair)",
         ],
-        price: "20/40/50",
+        price: "30/40/50",
       },
       {
         title: [
@@ -26,7 +26,7 @@ export const englishPricelist = {
         title: [
           "Men’s Haircut",
         ],
-        price: "20",
+        price: "20/25",
       },
       {
         title: [
@@ -56,7 +56,7 @@ export const englishPricelist = {
   colouring: {
     heading: "Colouring",
     description:
-      "*Prices for colouring includes the use of materials plus wahing & brushing. Materials: AlterEgo Italy",
+      "*Prices for colouring DO NOT include the use of materials. Washing & brushing included in the price.",
     services: [
       {
         title: "Roots",
@@ -148,7 +148,7 @@ export const russianPricelist = {
           "Стрижка женская",
           "(короткие/средние/длинные волосы)",
         ],
-        price: "20/40/50",
+        price: "30/40/50",
       },
       {
         title: [
@@ -166,7 +166,7 @@ export const russianPricelist = {
         title: [
           "Стрижка мужская",
         ],
-        price: "20",
+        price: "20/25",
       },
       {
         title: [
@@ -197,7 +197,7 @@ export const russianPricelist = {
   colouring: {
     heading: "Окрашивание",
     description:
-      "* Цены на окрашивания указаны с учетом расходных материалов. Мытье & укладка на брашинг включены в стоимость. Материалы: AlterEgo Italy",
+      "*Цены на окрашивания указаны без учета расходных материалов.",
     services: [
       {
         title: "Окрашивание корней",

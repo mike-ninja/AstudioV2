@@ -10,7 +10,7 @@ import {
 export default function Home() {
   return (
     <main>
-      <Header />
+      <Header headerBackground="/images/header-astudio.webp" />
       <About />
       <Carousel />
       <Services />

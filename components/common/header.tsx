@@ -9,14 +9,18 @@ import { linktrLink } from "@/lib";
 import { englishText, russianText } from "@/lib";
 import { useLanguage } from "@/context/language-context";
 
-export default function Header() {
+type HeaderProps = {
+  headerBackground: string;
+};
+
+export default function Header({ headerBackground }: HeaderProps) {
   const { language } = useLanguage();
   const text = language === "english" ? englishText : russianText;
 
   return (
     <header id="home" className="relative h-screen text-white z-0">
       <Image
-        src='/images/header-astudio.webp'
+        src={headerBackground}
         alt="Astudio Larnaca Header"
         quality={100}
         fill

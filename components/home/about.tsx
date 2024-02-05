@@ -35,8 +35,7 @@ export default function About() {
             rel="noreferrer"
             className="flex relative py-3 px-4 group transition-all active:scale-95 w-fit mt-4 sm:mt-10"
           >
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 bg-pink-500 z-0 rounded-full transition-all ease-in-out duration-300 group-hover:w-full">
-            </div>
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 bg-[#91C4D9] z-0 rounded-full transition-all ease-in-out duration-300 group-hover:w-full" />
             <span className="text-xl z-10">{text.button}</span>
           </Link>
         </div>

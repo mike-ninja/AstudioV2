@@ -22,9 +22,12 @@ export default function CallToAction() {
         className="object-cover z-0"
       />
       <div className="container flex">
-        <div className="z-10 bg-white/80 w-full text-center py-10 sm:py-24 rounded-lg">
-          <h2 className="text-2xl sm:text-6xl italic text-teal-400 mb-0 sm:mb-4">
-            {text.callToAction.heading}
+        <div className="z-10 bg-white/80 w-full text-center py-10 sm:py-24 rounded-xl">
+          <h2
+            style={{ fontFamily: "Shrikhand" }}
+            className="text-2xl sm:text-6xl italic text-teal-400 mb-0 sm:mb-4"
+          >
+            {"It's time you treat your hair!"}
           </h2>
           <p className="text-base sm:text-2xl text-sky-800/70">
             {text.callToAction.cta[0]}{" "}
@@ -39,7 +42,8 @@ export default function CallToAction() {
           </p>
         </div>
       </div>
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-full">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-fit flex items-center">
+        <div className="bg-[#91C4D9]/70 h-8 w-2 mr-1 sm:mr-2" />
         <p className="text-white text-xs sm:text-lg text-center">
           {text.callToAction.cta[2]}{"  "}
           <Link

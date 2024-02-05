@@ -4,14 +4,13 @@ import {
   Carousel,
   Header,
   InstagramGallery,
-  // Quote,
   Services,
 } from "@/components";
 
 export default function Home() {
   return (
     <main>
-      <Header headerBackground="/images/astudio-header.webp" />
+      <Header />
       <About />
       <Carousel />
       <Services />

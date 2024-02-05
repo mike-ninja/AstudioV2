@@ -63,7 +63,6 @@ export const englishText = {
     },
   },
   callToAction: {
-    heading: "It's time to treat your hair!",
     cta: [
       "Book your apointment",
       "here",
@@ -78,7 +77,6 @@ export const englishText = {
       "on Instagram",
     ],
     info: [
-      "Contact Us",
       "Address",
       "Phone",
     ],
@@ -162,7 +160,6 @@ export const russianText = {
     },
   },
   callToAction: {
-    heading: "Время позаботиться о Ваших волосах!",
     cta: [
       "Записаться",
       "здесь",
@@ -177,7 +174,6 @@ export const russianText = {
       "в Instagram",
     ],
     info: [
-      "Контакты",
       "Адрес",
       "Телефон",
     ],

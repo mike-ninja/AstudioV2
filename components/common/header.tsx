@@ -4,27 +4,23 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import Waves from "./waves";
 import { linktrLink } from "@/lib";
 import { englishText, russianText } from "@/lib";
-import Waves from "./waves";
 import { useLanguage } from "@/context/language-context";
 
-type HeaderProps = {
-  headerBackground: string;
-};
-
-export default function Header({ headerBackground }: HeaderProps) {
+export default function Header() {
   const { language } = useLanguage();
   const text = language === "english" ? englishText : russianText;
 
   return (
     <header id="home" className="relative h-screen text-white z-0">
       <Image
-        src={headerBackground}
+        src='/images/header-astudio.webp'
         alt="Astudio Larnaca Header"
         quality={100}
         fill
-        className="object-cover object-top z-0"
+        className="object-cover object-center z-0"
       />
 
       <small className="absolute top-4 left-1/2 -translate-x-1/2 text-sm sm:text-lg tracking-widest uppercase italic">
@@ -43,7 +39,7 @@ function HeaderBox({ button, studio }: { button: string; studio: string }) {
   return (
     <div className="z-10 text-center">
       <h1
-        style={{ fontFamily: "Playfair Display SC" }}
+        style={{ fontFamily: "Shrikhand" }}
         className="tracking-tight text-7xl sm:text-8xl"
       >
         A&nbsp;Studio

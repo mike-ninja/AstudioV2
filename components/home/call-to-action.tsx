@@ -22,7 +22,7 @@ export default function CallToAction() {
         className="object-cover z-0"
       />
       <div className="container flex">
-        <div className="z-10 bg-white/80 w-full text-center py-10 sm:py-24 rounded-xl">
+        <div className="z-10 bg-white/80 w-full text-center py-10 sm:py-24 rounded-xl px-5">
           <h2
             style={{ fontFamily: "Shrikhand" }}
             className="text-2xl sm:text-6xl italic text-teal-400 mb-0 sm:mb-4"
@@ -42,17 +42,19 @@ export default function CallToAction() {
           </p>
         </div>
       </div>
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-fit flex items-center">
-        <div className="bg-[#91C4D9]/70 h-8 w-2 mr-1 sm:mr-2" />
-        <p className="text-white text-xs sm:text-lg text-center">
-          {text.callToAction.cta[2]}{"  "}
-          <Link
-            href="#contact"
-            className="text-teal-400 transition-all duration-500 ease-in-out active:scale-95 hover:text-pink-500"
-          >
-            {text.callToAction.cta[3]}
-          </Link>
-        </p>
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-full flex justify-center">
+        <div className="flex items-center">
+          <div className="bg-[#91C4D9]/70 h-8 w-2 mr-1 sm:mr-2" />
+          <p className="text-white text-xs sm:text-lg text-center text-nowrap">
+            {text.callToAction.cta[2]}{"  "}
+            <Link
+              href="#contact"
+              className="text-teal-400 transition-all duration-500 ease-in-out active:scale-95 hover:text-pink-500"
+            >
+              {text.callToAction.cta[3]}
+            </Link>
+          </p>
+        </div>
       </div>
     </section>
   );

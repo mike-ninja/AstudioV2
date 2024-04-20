@@ -27,7 +27,7 @@ export default function CallToAction() {
             style={{ fontFamily: "Shrikhand" }}
             className="text-2xl sm:text-6xl italic text-teal-400 mb-0 sm:mb-4"
           >
-            {"It's time you treat your hair!"}
+            {"It's time to treat your hair!"}
           </h2>
           <p className="text-base sm:text-2xl text-sky-800/70">
             {text.callToAction.cta[0]}{" "}
@@ -46,7 +46,8 @@ export default function CallToAction() {
         <div className="flex items-center">
           <div className="bg-[#91C4D9]/70 h-8 w-2 mr-1 sm:mr-2" />
           <p className="text-white text-xs sm:text-lg text-center text-nowrap">
-            {text.callToAction.cta[2]}{"  "}
+            {text.callToAction.cta[2]}
+            {"  "}
             <Link
               href="#contact"
               className="text-teal-400 transition-all duration-500 ease-in-out active:scale-95 hover:text-pink-500"
